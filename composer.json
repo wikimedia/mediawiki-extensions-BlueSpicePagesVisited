@@ -1,0 +1,13 @@
+{
+	"name": "mediawiki/blue-spice-pages-visited",
+	"type": "mediawiki-extension",
+	"description": "Provides a personalized list of the last visited pages",
+	"license": "GPL-3.0",
+	"require": {
+		"composer/installers": "~1.0"
+	},
+	"autoload": {
+		"psr-4": {
+		}
+	}
+}

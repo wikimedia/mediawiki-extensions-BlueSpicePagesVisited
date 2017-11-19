@@ -5,8 +5,8 @@
 		]
 	},
 	"bs-pagesvisited-desc": "Хьайн хьаьжанчу агӀонийн могӀам ба йиш хуьлуьйту.",
-	"prefs-pagesvisited": "Хьаьжина агӀонаш",
-	"bs-pagesvisited-widget-title": "Хьаьжина агӀонаш",
+	"prefs-pagesvisited": "Хьовсийна агӀонаш",
+	"bs-pagesvisited-widget-title": "Хьовсийна агӀонаш",
 	"bs-pagesvisited-error-nsnotvalid": "Нийса йоцу цӀерийн {{PLURAL:$1|меттиг}} <code>$2</code> {{PLURAL:$1|is|are}}.",
 	"bs-pagesvisited-pref-widgetlimit": "ДӀаяздарийн доза тохар:",
 	"bs-pagesvisited-pref-widgetns": "ЦӀерийн меттиг:",

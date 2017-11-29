@@ -52,40 +52,7 @@ class PagesVisited extends BsExtensionMW {
 		$this->setHook( 'BSInsertMagicAjaxGetData' );
 		$this->setHook( 'BSUsageTrackerRegisterCollectors' );
 
-		BsConfig::registerVar( 'MW::PagesVisited::WidgetLimit', 10, BsConfig::LEVEL_USER|BsConfig::TYPE_INT, 'bs-pagesvisited-pref-widgetlimit', 'int' );
-		BsConfig::registerVar( 'MW::PagesVisited::WidgetNS', array( 0 ), BsConfig::LEVEL_USER|BsConfig::TYPE_ARRAY_STRING|BsConfig::USE_PLUGIN_FOR_PREFS, 'bs-pagesvisited-pref-widgetns', 'multiselectex' );
-		BsConfig::registerVar( 'MW::PagesVisited::WidgetSortOdr', 'time', BsConfig::LEVEL_USER|BsConfig::TYPE_STRING|BsConfig::USE_PLUGIN_FOR_PREFS, 'bs-pagesvisited-pref-widgetsortodr', 'select' );
-
 		wfProfileOut( 'BS::'.__METHOD__ );
-	}
-
-	/**
-	 * The preferences plugin callback
-	 * @param string $sAdapterName
-	 * @param BsConfig $oVariable
-	 * @return array MediaWiki preferences options array
-	 */
-	public function runPreferencePlugin( $sAdapterName, $oVariable ) {
-		$aPrefs = array();
-		switch( $oVariable->getName() ) {
-			case 'WidgetNS':
-				$aPrefs = array(
-					'type' => 'multiselectex',
-					'options' => BsNamespaceHelper::getNamespacesForSelectOptions( array( -2, NS_MEDIA, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK, NS_SPECIAL ) )
-				);
-				break;
-			case 'WidgetSortOdr':
-				$aPrefs = array(
-					'options' => array(
-						wfMessage( 'bs-pagesvisited-pref-sort-time' )->plain() => 'time',
-						wfMessage( 'bs-pagesvisited-pref-sort-pagename' )->plain() => 'pagename'
-					)
-				);
-				break;
-			default:
-				break;
-		}
-		return $aPrefs;
 	}
 
 	/**
@@ -211,9 +178,11 @@ class PagesVisited extends BsExtensionMW {
 	 * @param array &$aViews List of Widget view objects from the BlueSpice Skin.
 	 */
 	private function addWidgetView( &$aViews ) {
-		$iCount = BsConfig::get( 'MW::PagesVisited::WidgetLimit' );
-		$aNamespaces = BsConfig::get( 'MW::PagesVisited::WidgetNS' );
-		$sSortOrder = BsConfig::get( 'MW::PagesVisited::WidgetSortOdr' );
+		$config = \MediaWiki\MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
+
+		$iCount = $config->get( 'PagesVisitedWidgetLimit' );
+		$aNamespaces = $config->get( 'PagesVisitedWidgetNS' );
+		$sSortOrder = $config->get( 'PagesVisitedWidgetSortOdr' );
 
 		//Validation
 		$oValidationICount = BsValidator::isValid( 'IntegerRange', $iCount, array( 'fullResponse' => true, 'lowerBoundary' => 1, 'upperBoundary' => 30 ) );

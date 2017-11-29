@@ -20,8 +20,21 @@
 			"i18n"
 		]
 	},
+	"DefaultUserOptions": {
+		"bs-pagesvisited-pref-widgetlimit": "int",
+		"bs-pagesvisited-pref-widgetns": "multiselectex",
+		"bs-pagesvisited-pref-widgetsortodr": "select"
+	},
 	"AutoloadClasses": {
 		"PagesVisited": "PagesVisited.class.php"
+	},
+	"Hooks": {
+		"GetPreferences": [
+			"\\BlueSpice\\PagesVisited\\Hook\\GetPreferences\\AddWidgetLimit::callback",
+			"\\BlueSpice\\PagesVisited\\Hook\\GetPreferences\\AddWidgetNS::callback",
+			"\\BlueSpice\\PagesVisited\\Hook\\GetPreferences\\AddWidgetSortOdr::callback"
+		],
+		"UnitTestsList": "PagesVisited::onUnitTestsList"
 	},
 	"load_composer_autoloader": true,
 	"manifest_version": 1

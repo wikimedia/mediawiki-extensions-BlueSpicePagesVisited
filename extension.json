@@ -33,8 +33,7 @@
 			"\\BlueSpice\\PagesVisited\\Hook\\GetPreferences\\AddWidgetLimit::callback",
 			"\\BlueSpice\\PagesVisited\\Hook\\GetPreferences\\AddWidgetNS::callback",
 			"\\BlueSpice\\PagesVisited\\Hook\\GetPreferences\\AddWidgetSortOdr::callback"
-		],
-		"UnitTestsList": "PagesVisited::onUnitTestsList"
+		]
 	},
 	"load_composer_autoloader": true,
 	"manifest_version": 1

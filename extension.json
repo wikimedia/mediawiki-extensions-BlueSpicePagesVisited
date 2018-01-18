@@ -21,9 +21,9 @@
 		]
 	},
 	"DefaultUserOptions": {
-		"bs-pagesvisited-pref-widgetlimit": "int",
-		"bs-pagesvisited-pref-widgetns": "multiselectex",
-		"bs-pagesvisited-pref-widgetsortodr": "select"
+		"bs-pagesvisited-pref-widgetlimit": 5,
+		"bs-pagesvisited-pref-widgetns": [ 0 ],
+		"bs-pagesvisited-pref-widgetsortodr": "time"
 	},
 	"AutoloadClasses": {
 		"PagesVisited": "PagesVisited.class.php"

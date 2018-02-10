@@ -45,14 +45,11 @@ class PagesVisited extends BsExtensionMW {
 	 * Initialization of PagesVisited extension
 	 */
 	protected function initExt() {
-		wfProfileIn( 'BS::'.__METHOD__ );
 		$this->setHook( 'ParserFirstCallInit' );
 		$this->setHook( 'BSUserSidebarDefaultWidgets' );
 		$this->setHook( 'BSWidgetListHelperInitKeyWords' );
 		$this->setHook( 'BSInsertMagicAjaxGetData' );
 		$this->setHook( 'BSUsageTrackerRegisterCollectors' );
-
-		wfProfileOut( 'BS::'.__METHOD__ );
 	}
 
 	/**

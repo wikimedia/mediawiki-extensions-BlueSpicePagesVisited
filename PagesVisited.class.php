@@ -175,11 +175,12 @@ class PagesVisited extends BsExtensionMW {
 	 * @param array &$aViews List of Widget view objects from the BlueSpice Skin.
 	 */
 	private function addWidgetView( &$aViews ) {
-		$config = \MediaWiki\MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
-
-		$iCount = $config->get( 'PagesVisitedWidgetLimit' );
-		$aNamespaces = $config->get( 'PagesVisitedWidgetNS' );
-		$sSortOrder = $config->get( 'PagesVisitedWidgetSortOdr' );
+		$iCount = $this->getUser()->getOption( 'bs-pagesvisited-widgetlimit' );
+		$aNamespaces = explode(
+			'|',
+			$this->getUser()->getOption( 'bs-pagesvisited-widgetns' )
+		);
+		$sSortOrder = $this->getUser()->getOption( 'bs-pagesvisited-widgetsortodr' );
 
 		//Validation
 		$oValidationICount = BsValidator::isValid( 'IntegerRange', $iCount, array( 'fullResponse' => true, 'lowerBoundary' => 1, 'upperBoundary' => 30 ) );

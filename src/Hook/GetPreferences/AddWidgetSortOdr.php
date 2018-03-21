@@ -6,7 +6,7 @@ use BlueSpice\Hook\GetPreferences;
 
 class AddWidgetSortOdr extends GetPreferences {
 	protected function doProcess() {
-		$this->preferences['bs-pagesvisited-pref-widgetsortodr'] = array(
+		$this->preferences['bs-pagesvisited-widgetsortodr'] = array(
 			'type' => 'radio',
 			'section' => 'bluespice/pagesvisited',
 			'label-message' => 'bs-pagesvisited-pref-widgetsortodr',

@@ -21,9 +21,9 @@
 		]
 	},
 	"DefaultUserOptions": {
-		"bs-pagesvisited-pref-widgetlimit": 5,
-		"bs-pagesvisited-pref-widgetns": [ 0 ],
-		"bs-pagesvisited-pref-widgetsortodr": "time"
+		"bs-pagesvisited-widgetlimit": 5,
+		"bs-pagesvisited-widgetns": "0",
+		"bs-pagesvisited-widgetsortodr": "time"
 	},
 	"AutoloadClasses": {
 		"PagesVisited": "PagesVisited.class.php"

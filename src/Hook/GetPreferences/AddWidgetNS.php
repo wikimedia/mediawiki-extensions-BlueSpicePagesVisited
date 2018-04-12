@@ -3,15 +3,18 @@
 namespace BlueSpice\PagesVisited\Hook\GetPreferences;
 
 use BlueSpice\Hook\GetPreferences;
+use BlueSpice\Html\FormField\NamespaceMultiselect;
 
 class AddWidgetNS extends GetPreferences {
 	protected function doProcess() {
-		$this->preferences['bs-pagesvisited-pref-widgetns'] = array(
-			'type' => 'multiselectex',
+		$this->preferences['bs-pagesvisited-widgetns'] = [
+			'class' => NamespaceMultiselect::class,
 			'label-message' => 'bs-pagesvisited-pref-widgetns',
 			'section' => 'bluespice/pagesvisited',
-			'options' => \BsNamespaceHelper::getNamespacesForSelectOptions( array( -2, NS_MEDIA, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK, NS_SPECIAL ) )
-			);
+			NamespaceMultiselect::OPTION_BLACKLIST => [
+				NS_MEDIAWIKI, NS_MEDIAWIKI_TALK
+			]
+		];
 		return true;
 	}
 }

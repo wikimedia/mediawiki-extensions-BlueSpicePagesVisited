@@ -1,5 +1,5 @@
 {
-	"name": "mediawiki/blue-spice-pages-visited",
+	"name": "bluespice/pagesvisited",
 	"type": "mediawiki-extension",
 	"description": "Provides a personalized list of the last visited pages",
 	"license": "GPL-3.0-only",
@@ -24,5 +24,8 @@
 		"fix": [
 			"minus-x fix ."
 		]
+	},
+	"extra": {
+		"installer-name": "BlueSpicePagesVisited"
 	}
 }

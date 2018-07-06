@@ -46,7 +46,6 @@ class PagesVisited extends BsExtensionMW {
 	 */
 	protected function initExt() {
 		$this->setHook( 'ParserFirstCallInit' );
-		$this->setHook( 'BSUserSidebarDefaultWidgets' );
 		$this->setHook( 'BSWidgetListHelperInitKeyWords' );
 		$this->setHook( 'BSInsertMagicAjaxGetData' );
 		$this->setHook( 'BSUsageTrackerRegisterCollectors' );
@@ -153,21 +152,6 @@ class PagesVisited extends BsExtensionMW {
 		$aViews[0]->setAdditionalBodyClasses( array( 'bs-nav-links' ) );
 
 		return $aViews[0];
-	}
-
-	/**
-	 * Callback for WidgetBar. Adds the PagesVisited Widget to the WidgetBar as default filling.
-	 * @param BsEvent $oEvent The event to handle
-	 * @param array $aWidgets An array of WidgetView objects
-	 * @return array An array of WidgetView objects
-	 */
-	public function onBSUserSidebarDefaultWidgets( &$aViews, $oUser, $oTitle ) {
-		$aView = array();
-		$this->addWidgetView( $aView );
-		$aView[0]->setAdditionalBodyClasses( array( 'bs-nav-links' ) );
-		$aViews['PAGESVISITED'] = $aView[0];
-
-		return true;
 	}
 
 	/**
@@ -327,6 +311,8 @@ class PagesVisited extends BsExtensionMW {
 		//self::$prResultListViewCache[$sCacheKey] = $oVisitedPagesListView;
 		return $oVisitedPagesListView;
 	}
+
+
 
 	/**
 	 * Register tag with UsageTracker extension

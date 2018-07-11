@@ -69,7 +69,7 @@ class PagesVisited extends BasePanel implements IPanel {
 		$pagesVisited = $this->getPagesVisited( $count, $namespaces, $currentNamespaceId, $maxTitleLength, $sortOrder );
 
 		if( isset( $pagesVisited['error'] ) ) {
-			return "<span>" . $pagesVisited['error'] . "</span>";
+			return "<div class='widget-error'>" . $pagesVisited['error'] . "</div>";
 		}
 
 		$links = [];

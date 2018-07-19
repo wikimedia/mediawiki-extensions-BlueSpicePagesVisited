@@ -37,6 +37,7 @@ class PagesVisited extends BasePanel implements IPanel {
 			$namespaces = $this->params['namespaces'];
 		} else {
 			$namespaces = $this->getUser()->getOption( 'bs-pagesvisited-widgetns' );
+			$namespaces = explode( '|', $namespaces );
 		}
 
 		$sortOrder = $this->getUser()->getOption( 'bs-pagesvisited-widgetsortodr' );

@@ -169,30 +169,27 @@ class PagesVisited extends BasePanel implements IPanel {
 
 		$items = [];
 		foreach ( $res as $row ) {
-			if ( count( $items ) > $count ) break;
-			$visitedPageTitle = \Title::newFromID( $row->wo_page_id );
-			/*
-			// TODO RBV (24.02.11 13:52): Make SpecialPages work...
-			$oVisitedPageTitle = ( $row->wo_page_namespace != NS_SPECIAL )
-								? Title::newFromID( $row->wo_page_id )
-								//: SpecialPage::getTitleFor( $row->wo_page_title );
-								: Title::makeTitle( NS_SPECIAL, $row->wo_page_title );
-			*/
-			if ( $visitedPageTitle == null
-				|| $visitedPageTitle->exists() === false
-				|| $visitedPageTitle->quickUserCan( 'read' ) === false
-				//|| $oVisitedPageTitle->isRedirect() //Maybe later...
-			) {
+			if ( count( $items ) > $count ) {
+				break;
+			}
+			if( (int)$row->wo_page_id < 1 ) {
+				//skip special pages etc.
+				continue;
+			}
+			if( !$title = \Title::newFromID( $row->wo_page_id ) ) {
+				continue;
+			}
+			if ( !$title->exists() || !$title->quickUserCan( 'read' ) ) {
 				continue;
 			}
 
 			$displayTitle = \BsStringHelper::shorten(
-				$visitedPageTitle->getPrefixedText(),
+				$title->getPrefixedText(),
 				array( 'max-length' => $maxTitleLength, 'position' => 'middle' )
 			);
 
 			$items[] = [
-				'title' => $visitedPageTitle,
+				'title' => $title,
 				'displayText' => $displayTitle
 			];
 		}

@@ -138,7 +138,7 @@ class PagesVisited extends BsExtensionMW {
 		if ( $oListView instanceof ViewTagErrorList ) {
 			return $sOut;
 		} else {
-			return $this->mCore->parseWikiText( $sOut, $this->getTitle() );
+			return \BsCore::getInstance()->parseWikiText( $sOut, $this->getTitle() );
 		}
 	}
 
@@ -177,7 +177,7 @@ class PagesVisited extends BsExtensionMW {
 		$sOut = $oListView->execute();
 
 		if ( !( $oListView instanceof ViewTagError ) ) {
-			$sOut = $this->mCore->parseWikiText( $sOut, $this->getTitle() );
+			$sOut = \BsCore::getInstance()->parseWikiText( $sOut, $this->getTitle() );
 		}
 
 		$oWidgetView = new ViewWidget();

@@ -46,7 +46,6 @@ class PagesVisited extends BsExtensionMW {
 	 */
 	protected function initExt() {
 		$this->setHook( 'ParserFirstCallInit' );
-		$this->setHook( 'BSWidgetListHelperInitKeyWords' );
 		$this->setHook( 'BSInsertMagicAjaxGetData' );
 		$this->setHook( 'BSUsageTrackerRegisterCollectors' );
 	}
@@ -75,16 +74,6 @@ class PagesVisited extends BsExtensionMW {
 		$oDescriptor->helplink = 'https://help.bluespice.com/index.php/PagesVisited';
 		$oResponse->result[] = $oDescriptor;
 
-		return true;
-	}
-
-	/**
-	 * Event-Handler for 'MW::Utility::WidgetListHelper::InitKeywords'. Registers a callback for the PAGESVISITED Keyword.
-	 * @param array $aKeywords An array of Keywords array( 'KEYWORD' => $callable )
-	 * @return array The appended array of Keywords array( 'KEYWORD' => $callable )
-	 */
-	public function onBSWidgetListHelperInitKeyWords( &$aKeywords, $oTitle ) {
-		$aKeywords['PAGESVISITED'] = array( $this, 'onWidgetListKeyword' );
 		return true;
 	}
 
@@ -142,51 +131,6 @@ class PagesVisited extends BsExtensionMW {
 		}
 	}
 
-	/**
-	 * Callback for WidgetListHelper. Adds the PagesVisited Widget to the list if Keyword is found.
-	 * @return ViewWidget.
-	 */
-	public function onWidgetListKeyword() {
-		$aViews = array();
-		$this->addWidgetView( $aViews );
-		$aViews[0]->setAdditionalBodyClasses( array( 'bs-nav-links' ) );
-
-		return $aViews[0];
-	}
-
-	/**
-	 * Creates a Widget view object for the BlueSpice Skin.
-	 * @param array &$aViews List of Widget view objects from the BlueSpice Skin.
-	 */
-	private function addWidgetView( &$aViews ) {
-		$iCount = $this->getUser()->getOption( 'bs-pagesvisited-widgetlimit' );
-		$aNamespaces = explode(
-			'|',
-			$this->getUser()->getOption( 'bs-pagesvisited-widgetns' )
-		);
-		$sSortOrder = $this->getUser()->getOption( 'bs-pagesvisited-widgetsortodr' );
-
-		//Validation
-		$oValidationICount = BsValidator::isValid( 'IntegerRange', $iCount, array( 'fullResponse' => true, 'lowerBoundary' => 1, 'upperBoundary' => 30 ) );
-		if ( $oValidationICount->getErrorCode() ) $iCount = 10;
-
-		$iCurrentNamespaceId = $this->getTitle()->getNamespace();
-
-		// TODO RBV (04.07.11 15:02): Rework method -> implode() is a workaround for legacy code.
-		$oListView = $this->makePagesVisitedWikiList( $iCount, implode( ',', $aNamespaces ), $iCurrentNamespaceId, 30, $sSortOrder );
-		$sOut = $oListView->execute();
-
-		if ( !( $oListView instanceof ViewTagError ) ) {
-			$sOut = \BsCore::getInstance()->parseWikiText( $sOut, $this->getTitle() );
-		}
-
-		$oWidgetView = new ViewWidget();
-		$oWidgetView->setTitle( wfMessage( 'bs-pagesvisited-widget-title' )->plain() )
-					->setBody( $sOut )
-					->setAdditionalBodyClasses( array( 'bs-nav-links' ) ); //For correct margin and fontsize
-
-		$aViews[] = $oWidgetView;
-	}
 
 	/**
 	 * Gets the recently visited pages of the current user.

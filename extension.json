@@ -20,7 +20,10 @@
 		},
 		"BlueSpiceUserSidebar": {
 			"Widgets": {
-				"PAGESVISITED": "\\BlueSpice\\PagesVisited\\Panel\\PagesVisited::factory"
+				"PAGESVISITED": {
+					"callback": "\\BlueSpice\\PagesVisited\\Panel\\PagesVisited::factory",
+					"default": true
+				}
 			}
 		}
 	},

@@ -71,7 +71,8 @@ class PagesVisited extends BsExtensionMW {
 				'code' => '<bs:pagesvisited count="7" maxtitlelength="40" />'
 			)
 		);
-		$oDescriptor->helplink = 'https://help.bluespice.com/index.php/PagesVisited';
+		$extension =  \BlueSpice\Services::getInstance()->getBSExtensionFactory()->getExtension( 'BlueSpicePagesVisited' );
+		$oDescriptor->helplink = $extension->getUrl();
 		$oResponse->result[] = $oDescriptor;
 
 		return true;

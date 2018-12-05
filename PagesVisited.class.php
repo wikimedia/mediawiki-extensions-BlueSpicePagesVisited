@@ -193,30 +193,13 @@ class PagesVisited extends BsExtensionMW {
 
 		$dbr = wfGetDB( DB_REPLICA );
 
-		global $wgDBtype;
-		if ( $wgDBtype == 'oracle' ) {
-			$sRowNumField = 'rnk';
-			$sTable = mb_strtoupper( $dbr->tablePrefix().$sTable );
-			$sFields = implode( ',', $aFields );
-			$sConditions = $dbr->makeList( $aConditions, LIST_AND );
-			$aOptions['ORDER BY'] = $sSortOrder == 'pagename' ? $aOptions['ORDER BY'] : 'wo_timestamp DESC' ;
-
-			$res = $dbr->query( "SELECT ".$sFields." FROM (
-											SELECT ".$sFields.", row_number() over (order by ".$aOptions['ORDER BY'].") ".$sRowNumField."
-											FROM ".$sTable."
-											WHERE ".$sConditions."
-											)
-										WHERE ".$sRowNumField." BETWEEN (0) AND (".$iCount.") GROUP BY ".$aOptions["GROUP BY"].""
-			);
-		} else {
-			$res = $dbr->select(
-								$sTable,
-								$aFields,
-								$aConditions,
-								__METHOD__,
-								$aOptions
-						);
-		}
+		$res = $dbr->select(
+			$sTable,
+			$aFields,
+			$aConditions,
+			__METHOD__,
+			$aOptions
+		);
 
 		$oVisitedPagesListView = new ViewBaseElement();
 		$oVisitedPagesListView->setTemplate( '*{WIKILINK}' . "\n" );

@@ -142,30 +142,13 @@ class PagesVisited extends BasePanel implements IPanel {
 
 		$dbr = wfGetDB( DB_REPLICA );
 
-		global $wgDBtype;
-		if ( $wgDBtype == 'oracle' ) {
-			$rowNumField = 'rnk';
-			$table = mb_strtoupper( $dbr->tablePrefix().$table );
-			$fields = implode( ',', $fields );
-			$conditions = $dbr->makeList( $conditions, LIST_AND );
-			$options['ORDER BY'] = $sortOrder == 'pagename' ? $options['ORDER BY'] : 'wo_timestamp DESC' ;
-
-			$res = $dbr->query( "SELECT ".$fields." FROM (
-					SELECT ".$fields.", row_number() over (order by ".$options['ORDER BY'].") ".$rowNumField."
-					FROM ".$table."
-					WHERE ".$conditions."
-					)
-				WHERE ".$rowNumField." BETWEEN (0) AND (".$count.") GROUP BY ".$options["GROUP BY"].""
-			);
-		} else {
-			$res = $dbr->select(
-				$table,
-				$fields,
-				$conditions,
-				__METHOD__,
-				$options
-			);
-		}
+		$res = $dbr->select(
+			$table,
+			$fields,
+			$conditions,
+			__METHOD__,
+			$options
+		);
 
 		$items = [];
 		foreach ( $res as $row ) {

@@ -204,6 +204,7 @@ class PagesVisited extends BsExtensionMW {
 		$oVisitedPagesListView = new ViewBaseElement();
 		$oVisitedPagesListView->setTemplate( '*{WIKILINK}' . "\n" );
 		$iItems = 1;
+		$util = \BlueSpice\Services::getInstance()->getBSUtilityFactory();
 
 		foreach ( $res as $row ) {
 			if ( $iItems > $iCount ) break;
@@ -228,9 +229,14 @@ class PagesVisited extends BsExtensionMW {
 				array( 'max-length' => $iMaxTitleLength, 'position' => 'middle' )
 			);
 
-			$oVisitedPagesListView->addData(
-				array ( 'WIKILINK' => BsLinkProvider::makeEscapedWikiLinkForTitle( $oVisitedPageTitle, $sDisplayTitle ) )
-			);
+			$linkHelper = $util->getWikiTextLinksHelper( '' )
+				->getInternalLinksHelper()->addTargets( [
+				$sDisplayTitle => $oVisitedPageTitle
+			] );
+
+			$oVisitedPagesListView->addData( [
+				'WIKILINK' => $linkHelper->getWikitext()
+			] );
 			$iItems++;
 		}
 

@@ -84,7 +84,7 @@ class PagesVisited extends BasePanel implements IPanel {
 			$link = [
 				'href' => $pageVisited['title']->getFullURL(),
 				'text' => $pageVisited['displayText'],
-				'title' => $pageVisited['displayText'],
+				'title' => $pageVisited['title']->getPrefixedText(),
 				'classes' => ' bs-usersidebar-internal '
 			];
 			$links[] = $link;

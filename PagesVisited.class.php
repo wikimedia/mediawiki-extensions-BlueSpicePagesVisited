@@ -128,7 +128,7 @@ class PagesVisited extends BsExtensionMW {
 		if ( $oListView instanceof ViewTagErrorList ) {
 			return $sOut;
 		} else {
-			return \BsCore::getInstance()->parseWikiText( $sOut, $this->getTitle() );
+			return $oParser->recursiveTagParseFully( $sOut );
 		}
 	}
 

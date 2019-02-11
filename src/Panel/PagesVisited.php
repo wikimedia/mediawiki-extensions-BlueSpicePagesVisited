@@ -162,7 +162,7 @@ class PagesVisited extends BasePanel implements IPanel {
 			if( !$title = \Title::newFromID( $row->wo_page_id ) ) {
 				continue;
 			}
-			if ( !$title->exists() || !$title->quickUserCan( 'read' ) ) {
+			if ( !$title->exists() ) {
 				continue;
 			}
 

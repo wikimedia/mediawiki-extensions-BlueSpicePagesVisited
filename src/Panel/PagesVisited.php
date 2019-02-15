@@ -28,7 +28,7 @@ class PagesVisited extends BasePanel implements IPanel {
 	 * @return string
 	 */
 	public function getBody() {
-		$count = $this->getUser()->getOption( 'bs-pagesvisited-widgetlimit' );
+		$count = 7;
 		if( isset( $this->params['count'] ) ) {
 			$count = (int) $this->params['count'];
 		}
@@ -36,11 +36,10 @@ class PagesVisited extends BasePanel implements IPanel {
 		if( isset( $this->params['namespaces'] ) ) {
 			$namespaces = $this->params['namespaces'];
 		} else {
-			$namespaces = $this->getUser()->getOption( 'bs-pagesvisited-widgetns' );
-			$namespaces = explode( '|', $namespaces );
+			$namespaces = [ 'all' ];
 		}
 
-		$sortOrder = $this->getUser()->getOption( 'bs-pagesvisited-widgetsortodr' );
+		$sortOrder = "time";
 
 		if( isset( $this->params['order'] ) ) {
 			$sortOrder = $this->params['order'];

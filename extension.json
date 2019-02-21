@@ -35,20 +35,8 @@
 			"i18n"
 		]
 	},
-	"DefaultUserOptions": {
-		"bs-pagesvisited-widgetlimit": 5,
-		"bs-pagesvisited-widgetns": "0",
-		"bs-pagesvisited-widgetsortodr": "time"
-	},
 	"AutoloadClasses": {
 		"PagesVisited": "PagesVisited.class.php"
-	},
-	"Hooks": {
-		"GetPreferences": [
-			"\\BlueSpice\\PagesVisited\\Hook\\GetPreferences\\AddWidgetLimit::callback",
-			"\\BlueSpice\\PagesVisited\\Hook\\GetPreferences\\AddWidgetNS::callback",
-			"\\BlueSpice\\PagesVisited\\Hook\\GetPreferences\\AddWidgetSortOdr::callback"
-		]
 	},
 	"load_composer_autoloader": true,
 	"manifest_version": 2

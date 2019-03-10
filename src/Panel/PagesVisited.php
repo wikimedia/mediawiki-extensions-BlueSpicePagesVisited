@@ -131,7 +131,7 @@ class PagesVisited extends BasePanel implements IPanel {
 
 		if ( $sortOrder == 'pagename' ) $options['ORDER BY'] = 'wo_page_title ASC';
 
-		//If the page the extension is used on appears in the result set we have to fetch one row more than neccessary.
+		//If the page the extension is used on appears in the result set we have to fetch one row more than necessary.
 		if ( in_array( $currentNamespaceId, $namespaceIndexes ) ){
 			$options['OFFSET'] = 1;
 		}

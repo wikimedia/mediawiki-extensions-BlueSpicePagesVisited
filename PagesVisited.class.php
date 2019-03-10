@@ -185,7 +185,7 @@ class PagesVisited extends BsExtensionMW {
 
 		if ( $sSortOrder == 'pagename' ) $aOptions['ORDER BY'] = 'wo_page_title ASC';
 
-		//If the page the extension is used on appears in the result set we have to fetch one row more than neccessary.
+		//If the page the extension is used on appears in the result set we have to fetch one row more than necessary.
 		if ( in_array( $iCurrentNamespaceId, $aNamespaceIndexes ) ) $aOptions['OFFSET'] = 1;
 
 		$aFields = array( 'wo_page_id', 'wo_page_namespace', 'wo_page_title' );

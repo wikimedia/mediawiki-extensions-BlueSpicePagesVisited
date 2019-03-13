@@ -159,10 +159,8 @@ class PagesVisited extends BasePanel implements IPanel {
 				//skip special pages etc.
 				continue;
 			}
-			if( !$title = \Title::newFromID( $row->wo_page_id ) ) {
-				continue;
-			}
-			if ( !$title->exists() ) {
+			$title = \Title::newFromText( $row->wo_page_title, $row->wo_page_namespace );
+			if( $title === null ) {
 				continue;
 			}
 

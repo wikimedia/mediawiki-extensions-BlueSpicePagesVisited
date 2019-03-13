@@ -117,17 +117,19 @@ class PagesVisited extends BasePanel implements IPanel {
 			];
 		}
 
-		$conditions = array(
+		$conditions = [
 			'wo_user_id' => $this->getUser()->getId(),
-			'wo_action' => 'view'
-		);
+			'wo_action' => 'view',
+			'wo_page_id > 0',
+		];
 
 		$conditions[] = 'wo_page_namespace IN ('.implode( ',', $namespaceIndexes ).')'; //Add IN clause to conditions-array
 		//$conditions[] = 'wo_page_namespace != -1'; // TODO RBV (24.02.11 13:54): Filter SpecialPages because there are difficulties to list them
 
 		$options = array(
 			'GROUP BY' => 'wo_page_id, wo_page_namespace, wo_page_title',
-			'ORDER BY' => 'MAX(wo_timestamp) DESC'
+			'ORDER BY' => 'MAX(wo_timestamp) DESC',
+			'LIMIT' => $count,
 		);
 
 		if ( $sortOrder == 'pagename' ) $options['ORDER BY'] = 'wo_page_title ASC';
@@ -152,9 +154,6 @@ class PagesVisited extends BasePanel implements IPanel {
 
 		$items = [];
 		foreach ( $res as $row ) {
-			if ( count( $items ) > $count ) {
-				break;
-			}
 			if( (int)$row->wo_page_id < 1 ) {
 				//skip special pages etc.
 				continue;

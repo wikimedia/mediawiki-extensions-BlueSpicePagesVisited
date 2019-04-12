@@ -29,11 +29,11 @@ class PagesVisited extends BasePanel implements IPanel {
 	 */
 	public function getBody() {
 		$count = $this->getUser()->getOption( 'bs-pagesvisited-widgetlimit' );
-		if( isset( $this->params['count'] ) ) {
-			$count = (int) $this->params['count'];
+		if ( isset( $this->params['count'] ) ) {
+			$count = (int)$this->params['count'];
 		}
 
-		if( isset( $this->params['namespaces'] ) ) {
+		if ( isset( $this->params['namespaces'] ) ) {
 			$namespaces = $this->params['namespaces'];
 		} else {
 			$namespaces = $this->getUser()->getOption( 'bs-pagesvisited-widgetns' );
@@ -42,17 +42,17 @@ class PagesVisited extends BasePanel implements IPanel {
 
 		$sortOrder = $this->getUser()->getOption( 'bs-pagesvisited-widgetsortodr' );
 
-		if( isset( $this->params['order'] ) ) {
+		if ( isset( $this->params['order'] ) ) {
 			$sortOrder = $this->params['order'];
 		}
 
-		//Dumb default
+		// Dumb default
 		$maxTitleLength = 20;
-		if( isset( $this->params['maxtitlelength'] ) ) {
-			$maxTitleLength = (int) $this->params['maxtitlelength'];
+		if ( isset( $this->params['maxtitlelength'] ) ) {
+			$maxTitleLength = (int)$this->params['maxtitlelength'];
 		}
 
-		//Validation
+		// Validation
 		$validationICount = \BsValidator::isValid(
 			'IntegerRange',
 			$count,
@@ -63,7 +63,9 @@ class PagesVisited extends BasePanel implements IPanel {
 			]
 		);
 
-		if ( $validationICount->getErrorCode() ) $count = 10;
+		if ( $validationICount->getErrorCode() ) {
+			$count = 10;
+		}
 
 		$currentNamespaceId = $this->getTitle()->getNamespace();
 
@@ -75,12 +77,12 @@ class PagesVisited extends BasePanel implements IPanel {
 			$sortOrder
 		);
 
-		if( isset( $pagesVisited['error'] ) ) {
+		if ( isset( $pagesVisited['error'] ) ) {
 			return "<div class='widget-error'>" . $pagesVisited['error'] . "</div>";
 		}
 
 		$links = [];
-		foreach( $pagesVisited as $pageVisited ) {
+		foreach ( $pagesVisited as $pageVisited ) {
 			$link = [
 				'href' => $pageVisited['title']->getFullURL(),
 				'text' => $pageVisited['displayText'],
@@ -105,7 +107,7 @@ class PagesVisited extends BasePanel implements IPanel {
 
 	protected function getPagesVisited( $count = 5, $namespaces = 'all', $currentNamespaceId = 0, $maxTitleLength = 20, $sortOrder = 'time' ) {
 		try {
-			$namespaceIndexes = \BsNamespaceHelper::getNamespaceIdsFromAmbiguousCSVString( $namespaces ); //Returns array of integer indexes
+			$namespaceIndexes = \BsNamespaceHelper::getNamespaceIdsFromAmbiguousCSVString( $namespaces ); // Returns array of integer indexes
 		} catch ( \BsInvalidNamespaceException $exception ) {
 			$invalidNamespaces = $exception->getListOfInvalidNamespaces();
 
@@ -123,23 +125,25 @@ class PagesVisited extends BasePanel implements IPanel {
 			'wo_page_id > 0',
 		];
 
-		$conditions[] = 'wo_page_namespace IN ('.implode( ',', $namespaceIndexes ).')'; //Add IN clause to conditions-array
-		//$conditions[] = 'wo_page_namespace != -1'; // TODO RBV (24.02.11 13:54): Filter SpecialPages because there are difficulties to list them
+		$conditions[] = 'wo_page_namespace IN (' . implode( ',', $namespaceIndexes ) . ')'; // Add IN clause to conditions-array
+		// $conditions[] = 'wo_page_namespace != -1'; // TODO RBV (24.02.11 13:54): Filter SpecialPages because there are difficulties to list them
 
-		$options = array(
+		$options = [
 			'GROUP BY' => 'wo_page_id, wo_page_namespace, wo_page_title',
 			'ORDER BY' => 'MAX(wo_timestamp) DESC',
 			'LIMIT' => $count,
-		);
+		];
 
-		if ( $sortOrder == 'pagename' ) $options['ORDER BY'] = 'wo_page_title ASC';
+		if ( $sortOrder == 'pagename' ) {
+			$options['ORDER BY'] = 'wo_page_title ASC';
+		}
 
-		//If the page the extension is used on appears in the result set we have to fetch one row more than neccessary.
-		if ( in_array( $currentNamespaceId, $namespaceIndexes ) ){
+		// If the page the extension is used on appears in the result set we have to fetch one row more than necessary.
+		if ( in_array( $currentNamespaceId, $namespaceIndexes ) ) {
 			$options['OFFSET'] = 1;
 		}
 
-		$fields = array( 'wo_page_id', 'wo_page_namespace', 'wo_page_title' );
+		$fields = [ 'wo_page_id', 'wo_page_namespace', 'wo_page_title' ];
 		$table = 'bs_whoisonline';
 
 		$dbr = wfGetDB( DB_REPLICA );
@@ -154,18 +158,18 @@ class PagesVisited extends BasePanel implements IPanel {
 
 		$items = [];
 		foreach ( $res as $row ) {
-			if( (int)$row->wo_page_id < 1 ) {
-				//skip special pages etc.
+			if ( (int)$row->wo_page_id < 1 ) {
+				// skip special pages etc.
 				continue;
 			}
 			$title = \Title::newFromText( $row->wo_page_title, $row->wo_page_namespace );
-			if( $title === null ) {
+			if ( $title === null ) {
 				continue;
 			}
 
 			$displayTitle = \BsStringHelper::shorten(
 				$title->getPrefixedText(),
-				array( 'max-length' => $maxTitleLength, 'position' => 'middle' )
+				[ 'max-length' => $maxTitleLength, 'position' => 'middle' ]
 			);
 
 			$items[] = [

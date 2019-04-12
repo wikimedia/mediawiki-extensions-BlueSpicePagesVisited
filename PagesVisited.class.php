@@ -25,7 +25,7 @@
  * @package    BlueSpice_Extensions
  * @subpackage PagesVisited
  * @copyright  Copyright (C) 2016 Hallo Welt! GmbH, All rights reserved.
- * @license    http://www.gnu.org/copyleft/gpl.html GNU Public License v3
+ * @license    http://www.gnu.org/copyleft/gpl.html GPL-3.0-only
  * @filesource
  */
 
@@ -40,7 +40,7 @@ class PagesVisited extends BsExtensionMW {
 	 * Should cache a result list. Currently disabled.
 	 * @var array
 	 */
-	private static $prResultListViewCache = array();
+	private static $prResultListViewCache = [];
 	/**
 	 * Initialization of PagesVisited extension
 	 */
@@ -52,12 +52,14 @@ class PagesVisited extends BsExtensionMW {
 
 	/**
 	 * Inject tags into InsertMagic
-	 * @param Object $oResponse reference
-	 * $param String $type
+	 * @param Object &$oResponse reference
+	 * @param String $type
 	 * @return always true to keep hook running
 	 */
 	public function onBSInsertMagicAjaxGetData( &$oResponse, $type ) {
-		if( $type != 'tags' ) return true;
+		if ( $type != 'tags' ) {
+			return true;
+		}
 
 		$oDescriptor = new stdClass();
 		$oDescriptor->id = 'bs:pagesvisited';
@@ -66,12 +68,12 @@ class PagesVisited extends BsExtensionMW {
 		$oDescriptor->desc = wfMessage( 'bs-pagesvisited-tag-pagesvisited-desc' )->escaped();
 		$oDescriptor->code = '<bs:pagesvisited />';
 		$oDescriptor->previewable = false;
-		$oDescriptor->examples = array(
-			array(
+		$oDescriptor->examples = [
+			[
 				'code' => '<bs:pagesvisited count="7" maxtitlelength="40" />'
-			)
-		);
-		$extension =  \BlueSpice\Services::getInstance()->getBSExtensionFactory()->getExtension( 'BlueSpicePagesVisited' );
+			]
+		];
+		$extension = \BlueSpice\Services::getInstance()->getBSExtensionFactory()->getExtension( 'BlueSpicePagesVisited' );
 		$oDescriptor->helplink = $extension->getUrl();
 		$oResponse->result[] = $oDescriptor;
 
@@ -80,12 +82,12 @@ class PagesVisited extends BsExtensionMW {
 
 	/**
 	 * Hook-Handler for 'ParserFirstCallInit' (MediaWiki). Sets new Parser-Hooks for the &lt;bs:pagesvisited /&gt; and &lt;pagesvisited /&gt; tag
-	 * @param Parser $oParser The current Parser object from MediaWiki Framework
+	 * @param Parser &$oParser The current Parser object from MediaWiki Framework
 	 * @return bool Always true to keep hook running.
 	 */
 	public function onParserFirstCallInit( &$oParser ) {
-		$oParser->setHook( 'pagesvisited', array( $this, 'onPagesVisitedTag' ) );
-		$oParser->setHook( 'bs:pagesvisited', array( $this, 'onPagesVisitedTag' ) );
+		$oParser->setHook( 'pagesvisited', [ $this, 'onPagesVisitedTag' ] );
+		$oParser->setHook( 'bs:pagesvisited', [ $this, 'onPagesVisitedTag' ] );
 		return true;
 	}
 
@@ -107,15 +109,15 @@ class PagesVisited extends BsExtensionMW {
 		$sNamespaces = BsCore::sanitizeArrayEntry( $aAttributes, 'namespaces', 'all', BsPARAMTYPE::STRING | BsPARAMOPTION::CLEANUP_STRING );
 		$sSortOrder = BsCore::sanitizeArrayEntry( $aAttributes, 'order', 'time', BsPARAMTYPE::STRING | BsPARAMOPTION::CLEANUP_STRING );
 
-		//Validation
-		$oValidationICount = BsValidator::isValid( 'IntegerRange', $iCount, array('fullResponse' => true, 'lowerBoundary' => 1, 'upperBoundary' => 30) );
+		// Validation
+		$oValidationICount = BsValidator::isValid( 'IntegerRange', $iCount, [ 'fullResponse' => true, 'lowerBoundary' => 1, 'upperBoundary' => 30 ] );
 		if ( $oValidationICount->getErrorCode() ) {
-			$oErrorListView->addItem( new ViewTagError( 'count: '.$oValidationICount->getI18N() ) );
+			$oErrorListView->addItem( new ViewTagError( 'count: ' . $oValidationICount->getI18N() ) );
 		}
 
-		$oValidationIMaxTitleLength = BsValidator::isValid( 'IntegerRange', $iMaxTitleLength, array('fullResponse' => true, 'lowerBoundary' => 5, 'upperBoundary' => 50) );
+		$oValidationIMaxTitleLength = BsValidator::isValid( 'IntegerRange', $iMaxTitleLength, [ 'fullResponse' => true, 'lowerBoundary' => 5, 'upperBoundary' => 50 ] );
 		if ( $oValidationIMaxTitleLength->getErrorCode() ) {
-			$oErrorListView->addItem( new ViewTagError( 'maxtitlelength: '.$oValidationIMaxTitleLength->getI18N() ) );
+			$oErrorListView->addItem( new ViewTagError( 'maxtitlelength: ' . $oValidationIMaxTitleLength->getI18N() ) );
 		}
 
 		if ( $oErrorListView->hasItems() ) {
@@ -132,7 +134,6 @@ class PagesVisited extends BsExtensionMW {
 		}
 	}
 
-
 	/**
 	 * Gets the recently visited pages of the current user.
 	 * @param int $iCount The number of pages to display
@@ -143,17 +144,19 @@ class PagesVisited extends BsExtensionMW {
 	 */
 	private function makePagesVisitedWikiList( $iCount = 5, $sNamespaces = 'all', $iCurrentNamespaceId = 0, $iMaxTitleLength = 20, $sSortOrder = 'time' ) {
 		$oCurrentUser = $this->getUser();
-		if ( is_null( $oCurrentUser ) ) return null; // in CLI
+		if ( is_null( $oCurrentUser ) ) {
+			return null; // in CLI
+		}
 
-		//$sCacheKey = md5( $oCurrentUser->getName().$iCount.$sNamespaces.$iCurrentNamespaceId.$iMaxTitleLength );
-		//if( isset( self::$prResultListViewCache[$sCacheKey] ) ) return self::$prResultListViewCache[$sCacheKey];
+		// $sCacheKey = md5( $oCurrentUser->getName().$iCount.$sNamespaces.$iCurrentNamespaceId.$iMaxTitleLength );
+		// if( isset( self::$prResultListViewCache[$sCacheKey] ) ) return self::$prResultListViewCache[$sCacheKey];
 		$oErrorListView = new ViewTagErrorList( $this );
 		$oErrorView = null;
-		$aConditions = array();
-		$aNamespaceIndexes = array( 0 );
+		$aConditions = [];
+		$aNamespaceIndexes = [ 0 ];
 
 		try {
-			$aNamespaceIndexes = BsNamespaceHelper::getNamespaceIdsFromAmbiguousCSVString( $sNamespaces ); //Returns array of integer indexes
+			$aNamespaceIndexes = BsNamespaceHelper::getNamespaceIdsFromAmbiguousCSVString( $sNamespaces ); // Returns array of integer indexes
 		} catch ( BsInvalidNamespaceException $oException ) {
 			$aInvalidNamespaces = $oException->getListOfInvalidNamespaces();
 
@@ -164,31 +167,35 @@ class PagesVisited extends BsExtensionMW {
 			$sNs = implode( ', ', $aInvalidNamespaces );
 			$sErrorMsg = wfMessage( 'bs-pagesvisited-error-nsnotvalid', $iCount, $sNs )->text();
 
-			$oVisitedPagesListView->addData( array ( 'TEXT' => $sErrorMsg ) );
+			$oVisitedPagesListView->addData( [ 'TEXT' => $sErrorMsg ] );
 
-			//self::$prResultListViewCache[$sCacheKey] = $oVisitedPagesListView;
+			// self::$prResultListViewCache[$sCacheKey] = $oVisitedPagesListView;
 			return $oVisitedPagesListView;
 		}
 
-		$aConditions = array(
+		$aConditions = [
 			'wo_user_id' => $oCurrentUser->getId(),
 			'wo_action' => 'view'
-		);
+		];
 
-		$aConditions[] = 'wo_page_namespace IN ('.implode( ',', $aNamespaceIndexes ).')'; //Add IN clause to conditions-array
+		$aConditions[] = 'wo_page_namespace IN (' . implode( ',', $aNamespaceIndexes ) . ')'; // Add IN clause to conditions-array
 		$aConditions[] = 'wo_page_namespace != -1'; // TODO RBV (24.02.11 13:54): Filter SpecialPages because there are difficulties to list them
 
-		$aOptions = array(
+		$aOptions = [
 			'GROUP BY' => 'wo_page_id, wo_page_namespace, wo_page_title',
 			'ORDER BY' => 'MAX(wo_timestamp) DESC'
-		);
+		];
 
-		if ( $sSortOrder == 'pagename' ) $aOptions['ORDER BY'] = 'wo_page_title ASC';
+		if ( $sSortOrder == 'pagename' ) {
+			$aOptions['ORDER BY'] = 'wo_page_title ASC';
+		}
 
-		//If the page the extension is used on appears in the result set we have to fetch one row more than necessary.
-		if ( in_array( $iCurrentNamespaceId, $aNamespaceIndexes ) ) $aOptions['OFFSET'] = 1;
+		// If the page the extension is used on appears in the result set we have to fetch one row more than necessary.
+		if ( in_array( $iCurrentNamespaceId, $aNamespaceIndexes ) ) {
+			$aOptions['OFFSET'] = 1;
+		}
 
-		$aFields = array( 'wo_page_id', 'wo_page_namespace', 'wo_page_title' );
+		$aFields = [ 'wo_page_id', 'wo_page_namespace', 'wo_page_title' ];
 		$sTable = 'bs_whoisonline';
 
 		$dbr = wfGetDB( DB_REPLICA );
@@ -207,7 +214,9 @@ class PagesVisited extends BsExtensionMW {
 		$util = \BlueSpice\Services::getInstance()->getBSUtilityFactory();
 
 		foreach ( $res as $row ) {
-			if ( $iItems > $iCount ) break;
+			if ( $iItems > $iCount ) {
+				break;
+			}
 			$oVisitedPageTitle = Title::newFromID( $row->wo_page_id );
 			/*
 			// TODO RBV (24.02.11 13:52): Make SpecialPages work...
@@ -219,14 +228,14 @@ class PagesVisited extends BsExtensionMW {
 			if ( $oVisitedPageTitle == null
 				|| $oVisitedPageTitle->exists() === false
 				|| $oVisitedPageTitle->quickUserCan( 'read' ) === false
-				//|| $oVisitedPageTitle->isRedirect() //Maybe later...
+				// || $oVisitedPageTitle->isRedirect() //Maybe later...
 				) {
 				continue;
 			}
 
 			$sDisplayTitle = BsStringHelper::shorten(
 				$oVisitedPageTitle->getPrefixedText(),
-				array( 'max-length' => $iMaxTitleLength, 'position' => 'middle' )
+				[ 'max-length' => $iMaxTitleLength, 'position' => 'middle' ]
 			);
 
 			$linkHelper = $util->getWikiTextLinksHelper( '' )
@@ -240,26 +249,24 @@ class PagesVisited extends BsExtensionMW {
 			$iItems++;
 		}
 
-		//$dbr->freeResult( $res );
+		// $dbr->freeResult( $res );
 
-		//self::$prResultListViewCache[$sCacheKey] = $oVisitedPagesListView;
+		// self::$prResultListViewCache[$sCacheKey] = $oVisitedPagesListView;
 		return $oVisitedPagesListView;
 	}
 
-
-
 	/**
 	 * Register tag with UsageTracker extension
-	 * @param array $aCollectorsConfig
+	 * @param array &$aCollectorsConfig
 	 * @return Always true to keep hook running
 	 */
 	public function onBSUsageTrackerRegisterCollectors( &$aCollectorsConfig ) {
-		$aCollectorsConfig['bs:pagesvisited'] = array(
+		$aCollectorsConfig['bs:pagesvisited'] = [
 			'class' => 'Property',
-			'config' => array(
+			'config' => [
 				'identifier' => 'bs-tag-pagesvisited'
-			)
-		);
+			]
+		];
 		return true;
 	}
 }

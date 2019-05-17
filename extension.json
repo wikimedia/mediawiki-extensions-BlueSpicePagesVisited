@@ -50,6 +50,9 @@
 			"\\BlueSpice\\PagesVisited\\Hook\\GetPreferences\\AddWidgetSortOdr::callback"
 		]
 	},
+	"AutoloadNamespaces": {
+		"BlueSpice\\PagesVisited\\": "src/"
+	},
 	"load_composer_autoloader": true,
 	"manifest_version": 2
 }

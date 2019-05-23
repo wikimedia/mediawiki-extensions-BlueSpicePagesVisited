@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bjankuloski06"
+			"Bjankuloski06",
+			"Vlad5250"
 		]
 	},
 	"bs-pagesvisited-desc": "Дава лично прилагоден список на скорешно посетените страници",
@@ -13,5 +14,5 @@
 	"bs-pagesvisited-pref-widgetsortodr": "Подреди по:",
 	"bs-pagesvisited-pref-sort-time": "Време",
 	"bs-pagesvisited-pref-sort-pagename": "Наслов",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Прикажува список на страници што се ти посетиле."
+	"bs-pagesvisited-tag-pagesvisited-desc": "Прикажува список на неодамна посетени страници. Овој список може да се ограничува со параметри."
 }

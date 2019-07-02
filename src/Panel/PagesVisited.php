@@ -129,7 +129,7 @@ class PagesVisited extends BasePanel implements IPanel {
 
 		$options = [
 			'GROUP BY' => 'wo_page_id, wo_page_namespace, wo_page_title',
-			'ORDER BY' => 'MAX(wo_timestamp) DESC',
+			'ORDER BY' => 'MAX(wo_log_ts) DESC',
 			'LIMIT' => $count,
 		];
 

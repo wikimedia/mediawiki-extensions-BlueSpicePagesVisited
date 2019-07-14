@@ -41,6 +41,7 @@ class PagesVisited extends BsExtensionMW {
 	 * @var array
 	 */
 	private static $prResultListViewCache = [];
+
 	/**
 	 * Initialization of PagesVisited extension
 	 */

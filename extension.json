@@ -5,7 +5,8 @@
 	"url": "https://en.wiki.bluespice.com/wiki/Reference:PagesVisited",
 	"author": [
 		"Robert Vogel",
-		"Stephan Muggli"
+		"Stephan Muggli",
+		"Dejan Savuljesku"
 	],
 	"descriptionmsg": "bs-pagesvisited-desc",
 	"type": "bluespice",
@@ -20,9 +21,15 @@
 		"BlueSpiceFoundation": {
 			"Extensions": {
 				"BlueSpicePagesVisited": {
-					"className": "PagesVisited",
+					"className": "\\BlueSpice\\PagesVisited\\Extension",
 					"extPath": "/BlueSpicePagesVisited"
 				}
+			},
+			"TagRegistry": {
+				"pagesvisited": "\\BlueSpice\\PagesVisited\\Tag\\PagesVisited"
+			},
+			"RendererRegistry": {
+				"pagesvisited-pagelist": "\\BlueSpice\\PagesVisited\\Renderer\\PageList::factory"
 			}
 		},
 		"BlueSpiceUserSidebar": {
@@ -39,8 +46,9 @@
 			"i18n"
 		]
 	},
-	"AutoloadClasses": {
-		"PagesVisited": "PagesVisited.class.php"
+	"Hooks": {
+		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\PagesVisited\\Extension::onBSUsageTrackerRegisterCollectors",
+		"BSInsertMagicAjaxGetData": "\\BlueSpice\\PagesVisited\\Hook\\BSInsertMagicAjaxGetData\\AddPagesVisited::callback"
 	},
 	"AutoloadNamespaces": {
 		"BlueSpice\\PagesVisited\\": "src/"

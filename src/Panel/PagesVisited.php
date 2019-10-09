@@ -2,16 +2,40 @@
 
 namespace BlueSpice\PagesVisited\Panel;
 
+use Title;
 use BlueSpice\Calumma\IPanel;
 use BlueSpice\Calumma\Panel\BasePanel;
+use BlueSpice\Data\ResultSet;
+use BlueSpice\Data\ReaderParams;
+use BlueSpice\Data\Filter;
+use BlueSpice\Data\FieldType;
+use BlueSpice\Data\Filter\Numeric;
+use BlueSpice\Data\Filter\ListValue;
+use BlueSpice\Data\Filter\StringValue;
+use BlueSpice\WhoIsOnline\Data\Record;
+use BlueSpice\PagesVisited\Data\Store;
+use BlueSpice\Calumma\Components\SimpleLinkListGroup;
+use BsStringHelper;
 
 class PagesVisited extends BasePanel implements IPanel {
 	protected $params = [];
 
+	/**
+	 *
+	 * @param \SkinTemplate $sktemplate
+	 * @param array $params
+	 * @return \self
+	 */
 	public static function factory( $sktemplate, $params ) {
 		return new self( $sktemplate, $params );
 	}
 
+	/**
+	 *
+	 * @param \SkinTemplate $skintemplate
+	 * @param array $params
+	 * @return \self
+	 */
 	public function __construct( $skintemplate, $params ) {
 		parent::__construct( $skintemplate );
 		$this->params = $params;
@@ -28,22 +52,10 @@ class PagesVisited extends BasePanel implements IPanel {
 	 * @return string
 	 */
 	public function getBody() {
-		$count = $this->getUser()->getOption( 'bs-pagesvisited-widgetlimit' );
-		if ( isset( $this->params['count'] ) ) {
-			$count = (int)$this->params['count'];
-		}
-
-		if ( isset( $this->params['namespaces'] ) ) {
-			$namespaces = $this->params['namespaces'];
-		} else {
-			$namespaces = $this->getUser()->getOption( 'bs-pagesvisited-widgetns' );
-			$namespaces = explode( '|', $namespaces );
-		}
-
-		$sortOrder = $this->getUser()->getOption( 'bs-pagesvisited-widgetsortodr' );
-
-		if ( isset( $this->params['order'] ) ) {
-			$sortOrder = $this->params['order'];
+		$recordSet = new ResultSet( [], 0 );
+		if ( !$this->skintemplate->getSkin()->getUser()->isAnon() ) {
+			$readerParams = new ReaderParams( $this->makeParams() );
+			$recordSet = ( new Store() )->getReader()->read( $readerParams );
 		}
 
 		// Dumb default
@@ -52,132 +64,66 @@ class PagesVisited extends BasePanel implements IPanel {
 			$maxTitleLength = (int)$this->params['maxtitlelength'];
 		}
 
-		// Validation
-		$validationICount = \BsValidator::isValid(
-			'IntegerRange',
-			$count,
-			[
-				'fullResponse' => true,
-				'lowerBoundary' => 1,
-				'upperBoundary' => 30
-			]
-		);
-
-		if ( $validationICount->getErrorCode() ) {
-			$count = 10;
-		}
-
-		$currentNamespaceId = $this->getTitle()->getNamespace();
-
-		$pagesVisited = $this->getPagesVisited(
-			$count,
-			implode( ',', $namespaces ),
-			$currentNamespaceId,
-			$maxTitleLength,
-			$sortOrder
-		);
-
-		if ( isset( $pagesVisited['error'] ) ) {
-			return "<div class='widget-error'>" . $pagesVisited['error'] . "</div>";
-		}
-
 		$links = [];
-		foreach ( $pagesVisited as $pageVisited ) {
-			$link = [
-				'href' => $pageVisited['title']->getFullURL(),
-				'text' => $pageVisited['displayText'],
-				'title' => $pageVisited['title']->getPrefixedText(),
-				'classes' => ' bs-usersidebar-internal '
-			];
-			$links[] = $link;
+		if ( $recordSet->getTotal() > 0 ) {
+			foreach ( $recordSet->getRecords() as $record ) {
+				$title = Title::makeTitle(
+					$record->get( Record::PAGE_NAMESPACE ),
+					$record->get( Record::PAGE_TITLE )
+				);
+				if ( !$title ) {
+					continue;
+				}
+				$display = BsStringHelper::shorten( $title->getPrefixedText(), [
+					'max-length' => $maxTitleLength,
+					'position' => 'middle'
+				] );
+				$link = [
+					'href' => $title->getFullURL(),
+					'text' => $display,
+					'title' => $title->getPrefixedText(),
+					'classes' => ' bs-usersidebar-internal '
+				];
+				$links[] = $link;
+			}
 		}
 
-		$linkListGroup = new \BlueSpice\Calumma\Components\SimpleLinkListGroup( $links );
+		$linkListGroup = new SimpleLinkListGroup( $links );
 
 		return $linkListGroup->getHtml();
 	}
 
-	protected function getUser() {
-		return $this->skintemplate->getSkin()->getUser();
-	}
-
-	protected function getTitle() {
-		return $this->skintemplate->getSkin()->getTitle();
-	}
-
-	protected function getPagesVisited( $count = 5, $namespaces = 'all', $currentNamespaceId = 0, $maxTitleLength = 20, $sortOrder = 'time' ) {
-		try {
-			$namespaceIndexes = \BsNamespaceHelper::getNamespaceIdsFromAmbiguousCSVString( $namespaces ); // Returns array of integer indexes
-		} catch ( \BsInvalidNamespaceException $exception ) {
-			$invalidNamespaces = $exception->getListOfInvalidNamespaces();
-
-			$count = count( $invalidNamespaces );
-			$namespaces = implode( ', ', $invalidNamespaces );
-			return [
-				'error' =>
-				wfMessage( 'bs-pagesvisited-error-nsnotvalid', $count, $namespaces )->text()
+	/**
+	 *
+	 * @return array
+	 */
+	protected function makeParams() {
+		$params = [
+			ReaderParams::PARAM_LIMIT => 7,
+			ReaderParams::PARAM_FILTER => [],
+			ReaderParams::PARAM_FILTER => [ [
+				Filter::KEY_COMPARISON => StringValue::COMPARISON_EQUALS,
+				Filter::KEY_PROPERTY => Record::ACTION,
+				Filter::KEY_VALUE => 'view',
+				Filter::KEY_TYPE => FieldType::STRING
+			], [ Filter::KEY_COMPARISON => Numeric::COMPARISON_EQUALS,
+				Filter::KEY_PROPERTY => Record::USER_ID,
+				Filter::KEY_VALUE => (int)$this->skintemplate->getSkin()->getUser()->getId(),
+				Filter::KEY_TYPE => 'numeric'
+			] ]
+		];
+		if ( !empty( $this->params['namespaces'] ) ) {
+			$params[ReaderParams::PARAM_FILTER][] = [
+				Filter::KEY_COMPARISON => ListValue::COMPARISON_EQUALS,
+				Filter::KEY_PROPERTY => Record::PAGE_NAMESPACE,
+				Filter::KEY_VALUE => $this->params['namespaces'],
+				Filter::KEY_TYPE => FieldType::LISTVALUE
 			];
 		}
-
-		$conditions = [
-			'wo_user_id' => $this->getUser()->getId(),
-			'wo_action' => 'view',
-			'wo_page_id > 0',
-		];
-
-		$conditions[] = 'wo_page_namespace IN (' . implode( ',', $namespaceIndexes ) . ')'; // Add IN clause to conditions-array
-		// $conditions[] = 'wo_page_namespace != -1'; // TODO RBV (24.02.11 13:54): Filter SpecialPages because there are difficulties to list them
-
-		$options = [
-			'GROUP BY' => 'wo_page_id, wo_page_namespace, wo_page_title',
-			'ORDER BY' => 'MAX(wo_timestamp) DESC',
-			'LIMIT' => $count,
-		];
-
-		if ( $sortOrder == 'pagename' ) {
-			$options['ORDER BY'] = 'wo_page_title ASC';
+		if ( !empty( $this->params['count'] ) ) {
+			$params[ReaderParams::PARAM_LIMIT] = $this->params['count'];
 		}
 
-		// If the page the extension is used on appears in the result set we have to fetch one row more than necessary.
-		if ( in_array( $currentNamespaceId, $namespaceIndexes ) ) {
-			$options['OFFSET'] = 1;
-		}
-
-		$fields = [ 'wo_page_id', 'wo_page_namespace', 'wo_page_title' ];
-		$table = 'bs_whoisonline';
-
-		$dbr = wfGetDB( DB_REPLICA );
-
-		$res = $dbr->select(
-			$table,
-			$fields,
-			$conditions,
-			__METHOD__,
-			$options
-		);
-
-		$items = [];
-		foreach ( $res as $row ) {
-			if ( (int)$row->wo_page_id < 1 ) {
-				// skip special pages etc.
-				continue;
-			}
-			$title = \Title::newFromText( $row->wo_page_title, $row->wo_page_namespace );
-			if ( $title === null ) {
-				continue;
-			}
-
-			$displayTitle = \BsStringHelper::shorten(
-				$title->getPrefixedText(),
-				[ 'max-length' => $maxTitleLength, 'position' => 'middle' ]
-			);
-
-			$items[] = [
-				'title' => $title,
-				'displayText' => $displayTitle
-			];
-		}
-
-		return $items;
+		return $params;
 	}
 }

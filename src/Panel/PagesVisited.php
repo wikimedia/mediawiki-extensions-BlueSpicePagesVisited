@@ -16,6 +16,7 @@ use BlueSpice\WhoIsOnline\Data\Record;
 use BlueSpice\PagesVisited\Data\Store;
 use BlueSpice\Calumma\Components\SimpleLinkListGroup;
 use BsStringHelper;
+use Skins\Chameleon\IdRegistry;
 
 class PagesVisited extends BasePanel implements IPanel {
 	protected $params = [];
@@ -125,5 +126,42 @@ class PagesVisited extends BasePanel implements IPanel {
 		}
 
 		return $params;
+	}
+
+	/**
+	 *
+	 * @var string
+	 */
+	protected $htmlId = null;
+
+	/**
+	 * The HTML ID for thie component
+	 * @return string
+	 */
+	public function getHtmlId() {
+		if ( ( $this->htmlId === null ) && ( isset( $this->params['panelId'] ) ) ) {
+			$this->htmlId = IdRegistry::getRegistry()->getId( $this->params['panelId'] );
+		} elseif ( $this->htmlId === null ) {
+			$this->htmlId = IdRegistry::getRegistry()->getId();
+		}
+		return $this->htmlId;
+	}
+
+	/**
+	 *
+	 * @return bool
+	 */
+	public function getPanelCollapseState() {
+		$htmlId = $this->htmlId;
+
+		$cookieName = $this->getCookiePrefix() . $htmlId;
+		$skin = $this->skintemplate->getSkin();
+		$cookie = $skin->getRequest()->getCookie( $cookieName );
+
+		if ( $cookie === 'true' ) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Sayginer",
-			"Sadrettin"
+			"Sadrettin",
+			"BaRaN6161 TURK"
 		]
 	},
 	"bs-pagesvisited-desc": "Ziyaret edilen son sayfaların, kişiselleştirilmiş bir listesini oluşturur",
@@ -14,5 +15,5 @@
 	"bs-pagesvisited-pref-widgetsortodr": "Sıralama ölçütü:",
 	"bs-pagesvisited-pref-sort-time": "Zaman",
 	"bs-pagesvisited-pref-sort-pagename": "Başlık",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Ziyaret ettiğiniz sayfaların listesini görüntüler."
+	"bs-pagesvisited-tag-pagesvisited-desc": "Son ziyaret edilen sayfaların bir listesini gösterir. Bu liste parametrelerle sınırlandırılabilir."
 }

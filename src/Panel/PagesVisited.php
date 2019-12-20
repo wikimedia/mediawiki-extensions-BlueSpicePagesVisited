@@ -3,6 +3,7 @@
 namespace BlueSpice\PagesVisited\Panel;
 
 use Title;
+use QuickTemplate;
 use BlueSpice\Calumma\IPanel;
 use BlueSpice\Calumma\Panel\BasePanel;
 use BlueSpice\Data\ResultSet;
@@ -23,21 +24,21 @@ class PagesVisited extends BasePanel implements IPanel {
 
 	/**
 	 *
-	 * @param \SkinTemplate $sktemplate
+	 * @param QuickTemplate $sktemplate
 	 * @param array $params
 	 * @return \self
 	 */
-	public static function factory( $sktemplate, $params ) {
+	public static function factory( QuickTemplate $sktemplate, $params ) {
 		return new self( $sktemplate, $params );
 	}
 
 	/**
 	 *
-	 * @param \SkinTemplate $skintemplate
+	 * @param QuickTemplate $skintemplate
 	 * @param array $params
 	 * @return \self
 	 */
-	public function __construct( $skintemplate, $params ) {
+	public function __construct( QuickTemplate $skintemplate, $params ) {
 		parent::__construct( $skintemplate );
 		$this->params = $params;
 	}

@@ -2,22 +2,22 @@
 
 namespace BlueSpice\PagesVisited\Panel;
 
-use Title;
-use QuickTemplate;
+use BlueSpice\Calumma\Components\SimpleLinkListGroup;
 use BlueSpice\Calumma\IPanel;
 use BlueSpice\Calumma\Panel\BasePanel;
-use BlueSpice\Data\ResultSet;
-use BlueSpice\Data\ReaderParams;
-use BlueSpice\Data\Filter;
 use BlueSpice\Data\FieldType;
-use BlueSpice\Data\Filter\Numeric;
+use BlueSpice\Data\Filter;
 use BlueSpice\Data\Filter\ListValue;
+use BlueSpice\Data\Filter\Numeric;
 use BlueSpice\Data\Filter\StringValue;
-use BlueSpice\WhoIsOnline\Data\Record;
+use BlueSpice\Data\ReaderParams;
+use BlueSpice\Data\ResultSet;
 use BlueSpice\PagesVisited\Data\Store;
-use BlueSpice\Calumma\Components\SimpleLinkListGroup;
+use BlueSpice\WhoIsOnline\Data\Record;
 use BsStringHelper;
+use QuickTemplate;
 use Skins\Chameleon\IdRegistry;
+use Title;
 
 class PagesVisited extends BasePanel implements IPanel {
 	protected $params = [];

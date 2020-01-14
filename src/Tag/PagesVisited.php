@@ -2,12 +2,12 @@
 
 namespace BlueSpice\PagesVisited\Tag;
 
-use Parser;
-use PPFrame;
-use BlueSpice\Tag\GenericHandler;
-use BlueSpice\Tag\MarkerType\NoWiki;
 use BlueSpice\ParamProcessor\ParamDefinition;
 use BlueSpice\ParamProcessor\ParamType;
+use BlueSpice\Tag\GenericHandler;
+use BlueSpice\Tag\MarkerType\NoWiki;
+use Parser;
+use PPFrame;
 
 class PagesVisited extends \BlueSpice\Tag\Tag {
 	const PARAM_COUNT = 'count';

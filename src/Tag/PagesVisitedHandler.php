@@ -2,22 +2,22 @@
 
 namespace BlueSpice\PagesVisited\Tag;
 
-use RequestContext;
-use BlueSpice\Services;
-use BlueSpice\Tag\Handler;
-use BlueSpice\PagesVisited\Tag\PagesVisited as Tag;
-use BlueSpice\Renderer\Params;
-use BlueSpice\Data\ResultSet;
-use BlueSpice\Data\ReaderParams;
-use BlueSpice\Data\Filter;
 use BlueSpice\Data\FieldType;
-use BlueSpice\Data\Filter\Numeric;
+use BlueSpice\Data\Filter;
 use BlueSpice\Data\Filter\ListValue;
+use BlueSpice\Data\Filter\Numeric;
 use BlueSpice\Data\Filter\StringValue;
+use BlueSpice\Data\ReaderParams;
+use BlueSpice\Data\ResultSet;
 use BlueSpice\Data\Sort;
-use BlueSpice\WhoIsOnline\Data\Record;
 use BlueSpice\PagesVisited\Data\Store;
 use BlueSpice\PagesVisited\Renderer\PageList;
+use BlueSpice\PagesVisited\Tag\PagesVisited as Tag;
+use BlueSpice\Renderer\Params;
+use BlueSpice\Services;
+use BlueSpice\Tag\Handler;
+use BlueSpice\WhoIsOnline\Data\Record;
+use RequestContext;
 
 class PagesVisitedHandler extends Handler {
 

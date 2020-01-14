@@ -2,16 +2,16 @@
 
 namespace BlueSpice\PagesVisited\Renderer;
 
-use Html;
-use HtmlArmor;
-use Title;
-use IContextSource;
-use Config;
-use BlueSpice\UtilityFactory;
 use BlueSpice\Renderer\Params;
-use MediaWiki\Linker\LinkRenderer;
+use BlueSpice\UtilityFactory;
 use BlueSpice\WhoIsOnline\Data\Record;
 use BsStringHelper;
+use Config;
+use Html;
+use HtmlArmor;
+use IContextSource;
+use MediaWiki\Linker\LinkRenderer;
+use Title;
 
 class PageList extends \BlueSpice\WhoIsOnline\Renderer\UserList {
 	const PARAM_MAX_TITLE_LENGTH = 'maxtitlelength';

@@ -2,8 +2,8 @@
 
 namespace BlueSpice\PagesVisited\Data;
 
-use BlueSpice\Services;
 use BlueSpice\Data\NoWriterException;
+use BlueSpice\Services;
 
 class Store extends \BlueSpice\WhoIsOnline\Data\Store {
 

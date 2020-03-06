@@ -32,7 +32,7 @@ class PagesVisitedHandler extends Handler {
 			$recordSet = ( new Store() )->getReader()->read( $readerParams );
 		}
 
-		$portlet = Services::getInstance()->getBSRendererFactory()->get(
+		$portlet = Services::getInstance()->getService( 'BSRendererFactory' )->get(
 			'pagesvisited-pagelist',
 			new Params( [
 				PageList::PARAM_RECORD_SET => $recordSet,

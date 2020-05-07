@@ -2,11 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Arg",
-			"SPQRobin",
 			"Esketti",
+			"Mainframe98",
+			"SPQRobin",
 			"Siebrand",
-			"Sjoerddebruin",
-			"Mainframe98"
+			"Sjoerddebruin"
 		]
 	},
 	"bs-pagesvisited-desc": "Voegt een gepersonaliseerde lijst van de laatstbezochte pagina's",

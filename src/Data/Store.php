@@ -3,7 +3,7 @@
 namespace BlueSpice\PagesVisited\Data;
 
 use BlueSpice\Data\NoWriterException;
-use BlueSpice\Services;
+use MediaWiki\MediaWikiServices;
 
 class Store extends \BlueSpice\WhoIsOnline\Data\Store {
 
@@ -13,7 +13,7 @@ class Store extends \BlueSpice\WhoIsOnline\Data\Store {
 	 */
 	public function getReader() {
 		return new Reader(
-			Services::getInstance()->getDBLoadBalancer()
+			MediaWikiServices::getInstance()->getDBLoadBalancer()
 		);
 	}
 

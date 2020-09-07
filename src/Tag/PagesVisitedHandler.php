@@ -14,9 +14,9 @@ use BlueSpice\PagesVisited\Data\Store;
 use BlueSpice\PagesVisited\Renderer\PageList;
 use BlueSpice\PagesVisited\Tag\PagesVisited as Tag;
 use BlueSpice\Renderer\Params;
-use BlueSpice\Services;
 use BlueSpice\Tag\Handler;
 use BlueSpice\WhoIsOnline\Data\Record;
+use MediaWiki\MediaWikiServices;
 use RequestContext;
 
 class PagesVisitedHandler extends Handler {
@@ -32,7 +32,7 @@ class PagesVisitedHandler extends Handler {
 			$recordSet = ( new Store() )->getReader()->read( $readerParams );
 		}
 
-		$portlet = Services::getInstance()->getService( 'BSRendererFactory' )->get(
+		$portlet = MediaWikiServices::getInstance()->getService( 'BSRendererFactory' )->get(
 			'pagesvisited-pagelist',
 			new Params( [
 				PageList::PARAM_RECORD_SET => $recordSet,

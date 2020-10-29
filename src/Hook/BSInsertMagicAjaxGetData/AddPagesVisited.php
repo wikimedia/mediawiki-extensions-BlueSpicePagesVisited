@@ -27,6 +27,7 @@ class AddPagesVisited extends BSInsertMagicAjaxGetData {
 				'bs-pagesvisited-tag-pagesvisited-desc'
 			)->escaped(),
 			'code' => '<bs:pagesvisited />',
+			'mwvecommand' => 'pagevisitedCommand',
 			'previewable' => false,
 			'examples' => [
 				[ 'code' => $this->getExampleCode() ]

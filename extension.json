@@ -32,6 +32,11 @@
 				"pagesvisited-pagelist": "\\BlueSpice\\PagesVisited\\Renderer\\PageList::factory"
 			}
 		},
+		"BlueSpiceVisualEditorConnector": {
+			"TagDefinitions": [
+				"ext.bluespice.pagesvisited.visualEditorTagDefinition"
+			]
+		},
 		"BlueSpiceUserSidebar": {
 			"Widgets": {
 				"PAGESVISITED": {
@@ -52,6 +57,31 @@
 	"Hooks": {
 		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\PagesVisited\\Extension::onBSUsageTrackerRegisterCollectors",
 		"BSInsertMagicAjaxGetData": "\\BlueSpice\\PagesVisited\\Hook\\BSInsertMagicAjaxGetData\\AddPagesVisited::callback"
+	},
+	"ResourceModules": {
+		"ext.bluespice.pagesvisited.visualEditorTagDefinition": {
+			"scripts": [
+				"bs.pagesvisited/util/tag/PagesVisitedDefinition.js"
+			],
+			"messages": [
+				"bs-pagesvisited-ve-pagesvisited-title",
+				"bs-pagesvisited-tag-pagesvisited-desc",
+				"bs-pagesvisited-ve-pagesvisited-attr-count-label",
+				"bs-pagesvisited-ve-pagesvisited-attr-count-help",
+				"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label",
+				"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-help",
+				"bs-pagesvisited-ve-pagesvisited-attr-order-label",
+				"bs-pagesvisited-ve-pagesvisited-attr-order-help",
+				"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label",
+				"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help",
+				"bs-pagesvisited-tag-pagesvisited-attr-order-option-time",
+				"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "BlueSpicePagesVisited/resources"
 	},
 	"AutoloadNamespaces": {
 		"BlueSpice\\PagesVisited\\": "src/"

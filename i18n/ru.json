@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shuba",
 			"HarpyWar",
 			"Meshkov.a",
-			"Okras"
+			"Okras",
+			"Shuba"
 		]
 	},
 	"bs-pagesvisited-desc": "Предоставляет собственный список последних посещенных страниц.",

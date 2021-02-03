@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Guycn2"
 		]
 	},
@@ -13,5 +14,5 @@
 	"bs-pagesvisited-pref-widgetsortodr": "מיון לפי:",
 	"bs-pagesvisited-pref-sort-time": "זמן",
 	"bs-pagesvisited-pref-sort-pagename": "כותרת",
-	"bs-pagesvisited-tag-pagesvisited-desc": "הצגת רשימה של הדפים שנצפו לאחרונה. אפשר לצמצם את הרשימה הזו לפי פרמטרים."
+	"bs-pagesvisited-tag-pagesvisited-desc": "הצגת רשימה של הדפים שנצפו לאחרונה. אפשר לצמצם את הרשימה הזאת לפי פרמטרים."
 }

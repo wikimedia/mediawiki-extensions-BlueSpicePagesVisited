@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Besnik b",
 			"Gertakapllani"
 		]
 	},
@@ -12,5 +13,5 @@
 	"bs-pagesvisited-pref-widgetsortodr": "Rendit nga",
 	"bs-pagesvisited-pref-sort-time": "Koha",
 	"bs-pagesvisited-pref-sort-pagename": "titull",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Afishon një listë të faqeve që keni vizituar."
+	"bs-pagesvisited-tag-pagesvisited-desc": "Shfaq një listë të faqeve të vizituara së fundi. Kjo listë mund të kufizohet përmes parametrash."
 }

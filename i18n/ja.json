@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Otokoume",
-			"Shirayuki"
+			"Shirayuki",
+			"しぃ"
 		]
 	},
 	"bs-pagesvisited-desc": "最後に訪問したページのパーソナライズされたリストを提供します",
@@ -14,5 +15,5 @@
 	"bs-pagesvisited-pref-widgetsortodr": "並び順:",
 	"bs-pagesvisited-pref-sort-time": "日時",
 	"bs-pagesvisited-pref-sort-pagename": "ページ名",
-	"bs-pagesvisited-tag-pagesvisited-desc": "閲覧したページの一覧を表示する。"
+	"bs-pagesvisited-tag-pagesvisited-desc": "最近訪れたページのリストを表示します。このリストはパラメータで制限することができます。"
 }

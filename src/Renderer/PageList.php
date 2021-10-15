@@ -14,7 +14,7 @@ use MediaWiki\Linker\LinkRenderer;
 use Title;
 
 class PageList extends \BlueSpice\WhoIsOnline\Renderer\UserList {
-	const PARAM_MAX_TITLE_LENGTH = 'maxtitlelength';
+	public const PARAM_MAX_TITLE_LENGTH = 'maxtitlelength';
 
 	/**
 	 * Constructor

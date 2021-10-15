@@ -10,10 +10,10 @@ use Parser;
 use PPFrame;
 
 class PagesVisited extends \BlueSpice\Tag\Tag {
-	const PARAM_COUNT = 'count';
-	const PARAM_MAX_TITLE_LENGTH = 'maxtitlelength';
-	const PARAM_NAMESPACES = 'namespaces';
-	const PARAM_ORDER = 'order';
+	public const PARAM_COUNT = 'count';
+	public const PARAM_MAX_TITLE_LENGTH = 'maxtitlelength';
+	public const PARAM_NAMESPACES = 'namespaces';
+	public const PARAM_ORDER = 'order';
 
 	/**
 	 *

@@ -38,6 +38,9 @@
 					"callback": "\\BlueSpice\\PagesVisited\\Panel\\PagesVisited::factory",
 					"default": true
 				}
+			},
+			"WidgetRegistry": {
+				"PAGESVISITED": "\\BlueSpice\\PagesVisited\\UserSidebar\\Widget\\PagesVisited::factory"
 			}
 		}
 	},

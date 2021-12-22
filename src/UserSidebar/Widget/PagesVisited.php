@@ -67,7 +67,7 @@ class PagesVisited extends Widget {
 				'position' => 'middle'
 			] );
 			$link = [
-				'href' => $title->getFullURL(),
+				'href' => $title->getLocalURL(),
 				'text' => $display,
 				'title' => $title->getPrefixedText(),
 				'classes' => ' bs-usersidebar-internal '

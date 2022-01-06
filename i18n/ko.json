@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hwangjy9"
+			"Hwangjy9",
+			"Yunbj"
 		]
 	},
+	"prefs-pagesvisited": "방문한 페이지",
+	"bs-pagesvisited-widget-title": "방문한 페이지",
 	"bs-pagesvisited-pref-widgetns": "이름공간:",
 	"bs-pagesvisited-pref-widgetsortodr": "정렬 기준:",
 	"bs-pagesvisited-pref-sort-time": "시간",

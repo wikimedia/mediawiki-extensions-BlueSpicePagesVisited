@@ -3,6 +3,7 @@
 		"authors": [
 			"Otokoume",
 			"Shirayuki",
+			"Sou0012",
 			"しぃ"
 		]
 	},
@@ -15,5 +16,8 @@
 	"bs-pagesvisited-pref-widgetsortodr": "並び順:",
 	"bs-pagesvisited-pref-sort-time": "日時",
 	"bs-pagesvisited-pref-sort-pagename": "ページ名",
-	"bs-pagesvisited-tag-pagesvisited-desc": "最近訪れたページのリストを表示します。このリストはパラメータで制限することができます。"
+	"bs-pagesvisited-tag-pagesvisited-desc": "最近訪れたページのリストを表示します。このリストはパラメータで制限することができます。",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-help": "リストに表示するページ数を設定する",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "並び順",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "名前空間"
 }

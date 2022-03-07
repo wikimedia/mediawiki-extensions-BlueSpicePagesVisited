@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"HarpyWar",
+			"Kareyac",
 			"Meshkov.a",
 			"Okras",
 			"Shuba"
@@ -16,5 +17,8 @@
 	"bs-pagesvisited-pref-widgetsortodr": "Сортировать по:",
 	"bs-pagesvisited-pref-sort-time": "Время",
 	"bs-pagesvisited-pref-sort-pagename": "Заголовок",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Показывает список недавно посещённых страниц. Этот список может быть ограничен параметрами."
+	"bs-pagesvisited-tag-pagesvisited-desc": "Показывает список недавно посещённых страниц. Этот список может быть ограничен параметрами.",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Порядок",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Пространства имён",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Время"
 }

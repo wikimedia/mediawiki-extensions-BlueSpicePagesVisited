@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"FiberAhmed",
 			"Meno25",
 			"ديفيد"
 		]
@@ -14,5 +15,6 @@
 	"bs-pagesvisited-pref-widgetsortodr": "ترتيب حسب:",
 	"bs-pagesvisited-pref-sort-time": "الوقت",
 	"bs-pagesvisited-pref-sort-pagename": "العنوان",
-	"bs-pagesvisited-tag-pagesvisited-desc": "يعرض قائمة بالصفحات التي تمت زيارتها مؤخرا، يمكن تقييد هذه القائمة بواسطة وسائط."
+	"bs-pagesvisited-tag-pagesvisited-desc": "يعرض قائمة بالصفحات التي تمت زيارتها مؤخرا، يمكن تقييد هذه القائمة بواسطة وسائط.",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "الوقت"
 }

@@ -13,5 +13,10 @@
 	"bs-pagesvisited-pref-widgetsortodr": "Ordinar per:",
 	"bs-pagesvisited-pref-sort-time": "Hora",
 	"bs-pagesvisited-pref-sort-pagename": "Titulo",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Monstra un lista de paginas recentemente visitate. iste lista pote esser restringite per parametros."
+	"bs-pagesvisited-tag-pagesvisited-desc": "Monstra un lista de paginas recentemente visitate. iste lista pote esser restringite per parametros.",
+	"bs-pagesvisited-ve-pagesvisited-title": "Paginas visitate",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "Numero",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "Longitude maximal del titulo",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Ordine",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Spatios de nomines"
 }

@@ -15,5 +15,6 @@
 	"bs-pagesvisited-ve-pagesvisited-title": "방문한 페이지",
 	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "최대 제목 길이",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "이름공간",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "이 이름공간의 문서만 표시",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "시간"
 }

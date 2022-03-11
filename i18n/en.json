@@ -13,5 +13,16 @@
 	"bs-pagesvisited-pref-widgetsortodr": "Sort by:",
 	"bs-pagesvisited-pref-sort-time": "Time",
 	"bs-pagesvisited-pref-sort-pagename": "Title",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Shows a list of recently visited pages. This list can be restricted by parameters."
+	"bs-pagesvisited-tag-pagesvisited-desc": "Shows a list of recently visited pages. This list can be restricted by parameters.",
+	"bs-pagesvisited-ve-pagesvisited-title": "Pages visited",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "Count",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-help": "Set the number of pages shown in the list",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "Maximum title length",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-help": "Set the maximum number of characters before a title is cut off",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Order",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-help": "Set the order in which the pages are displayed",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Namespaces",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Only show pages from these namespaces",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Time",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Pagename"
 }

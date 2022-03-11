@@ -15,5 +15,9 @@
 	"bs-pagesvisited-pref-widgetsortodr": "Ordina per:",
 	"bs-pagesvisited-pref-sort-time": "Ora",
 	"bs-pagesvisited-pref-sort-pagename": "Titolo",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Mostra un elenco delle pagine visitate recentemente. Questo elenco può essere ristretto con dei parametri."
+	"bs-pagesvisited-tag-pagesvisited-desc": "Mostra un elenco delle pagine visitate recentemente. Questo elenco può essere ristretto con dei parametri.",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-help": "Imposta il numero di pagine da mostrare nell'elenco",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Ordina",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Namespace",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Mostra solo pagine da questi namespace"
 }

@@ -5,6 +5,7 @@
 			"Esketti",
 			"Mainframe98",
 			"McDutchie",
+			"Nieuwsgierige Gebruiker",
 			"SPQRobin",
 			"Siebrand",
 			"Sjoerddebruin"
@@ -19,5 +20,7 @@
 	"bs-pagesvisited-pref-widgetsortodr": "Sorteren op:",
 	"bs-pagesvisited-pref-sort-time": "Tijd",
 	"bs-pagesvisited-pref-sort-pagename": "Naam",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Toont een lijst met recent bezochte pagina's. Deze lijst kan worden beperkt met parameters."
+	"bs-pagesvisited-tag-pagesvisited-desc": "Toont een lijst met recent bezochte pagina's. Deze lijst kan worden beperkt met parameters.",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "Aantal",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Naamruimten"
 }

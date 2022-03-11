@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Comp1089",
 			"Sagan",
 			"Азат Хәлилов"
 		]
@@ -14,5 +15,6 @@
 	"bs-pagesvisited-pref-widgetsortodr": "Тәртипләштереү:",
 	"bs-pagesvisited-pref-sort-time": "Ваҡыт",
 	"bs-pagesvisited-pref-sort-pagename": "Баш һүҙ",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Һеҙ ҡараған биттәр исемлеге"
+	"bs-pagesvisited-tag-pagesvisited-desc": "Һеҙ ҡараған биттәр исемлеге",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Бит исеме"
 }

@@ -25,8 +25,8 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-help": "Fixer le nombre maximal de caractères avant qu’un titre soit tronqué",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Ordre",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-help": "Fixer l’ordre dans lequel les pages sont affichées",
-	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Espaces de nom",
-	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Afficher seulement les pages de ces espaces de nom",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Espaces de noms",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Afficher seulement les pages de ces espaces de noms",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Heure",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Nom de la page"
 }

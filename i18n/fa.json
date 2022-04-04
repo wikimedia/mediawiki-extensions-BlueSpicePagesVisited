@@ -7,8 +7,8 @@
 		]
 	},
 	"bs-pagesvisited-desc": "یک فهرست شخصی از آخرین صفحات بازدیدشده فراهم می‌کند",
-	"prefs-pagesvisited": "صفحات بازدیدشده",
-	"bs-pagesvisited-widget-title": "صفحات بازدیدشده",
+	"prefs-pagesvisited": "صفحه‌های بازدیدشده",
+	"bs-pagesvisited-widget-title": "صفحه‌های بازدیدشده",
 	"bs-pagesvisited-error-nsnotvalid": "{{PLURAL:$1|فضای نام|فضاهای نام}} <code>$2</code> داده‌شده معتبر {{PLURAL:$1|نیست|نیستند}}.",
 	"bs-pagesvisited-pref-widgetlimit": "محدودیت ورودی‌ها:",
 	"bs-pagesvisited-pref-widgetns": "فضاهای نام:",

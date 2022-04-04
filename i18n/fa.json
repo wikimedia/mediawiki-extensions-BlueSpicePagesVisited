@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Alirezaaa",
-			"Jeeputer"
+			"Jeeputer",
+			"Beginneruser"
 		]
 	},
 	"bs-pagesvisited-desc": "یک فهرست شخصی از آخرین صفحات بازدیدشده فراهم می‌کند",
@@ -14,5 +15,6 @@
 	"bs-pagesvisited-pref-widgetsortodr": "ترتیب بر پایه:",
 	"bs-pagesvisited-pref-sort-time": "زمان",
 	"bs-pagesvisited-pref-sort-pagename": "عنوان",
-	"bs-pagesvisited-tag-pagesvisited-desc": "فهرستی از صفحاتی که اخیراً بازدید کردید را نشان می‌دهد. این فهرست می‌تواند با استفاده از پارامترها محدود شود."
+	"bs-pagesvisited-tag-pagesvisited-desc": "فهرستی از صفحاتی که اخیراً بازدید کردید را نشان می‌دهد. این فهرست می‌تواند با استفاده از پارامترها محدود شود.",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "فضاهای نام"
 }

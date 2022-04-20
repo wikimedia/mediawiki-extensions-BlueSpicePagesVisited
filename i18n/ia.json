@@ -18,5 +18,11 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "Numero",
 	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "Longitude maximal del titulo",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Ordine",
-	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Spatios de nomines"
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Spatios de nomines",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-help": "Fixar le numero de paginas monstrate in le lista",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-help": "Fixar le numero maximal de characteres ante que un titulo es truncate",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-help": "Fixar le ordine in le qual le paginas es monstrate",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Monstrar solmente le paginas de iste spatios de nomines",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Hora",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Nomine de pagina"
 }

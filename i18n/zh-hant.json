@@ -3,7 +3,8 @@
 		"authors": [
 			"Cwlin0416",
 			"Kly",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Winston Sung"
 		]
 	},
 	"bs-pagesvisited-desc": "提供最近訪問頁面的個人化清單",
@@ -15,5 +16,8 @@
 	"bs-pagesvisited-pref-widgetsortodr": "排序方式：",
 	"bs-pagesvisited-pref-sort-time": "時間",
 	"bs-pagesvisited-pref-sort-pagename": "標題",
-	"bs-pagesvisited-tag-pagesvisited-desc": "顯示近期訪問頁面的清單。清單可以透過參數來限制。"
+	"bs-pagesvisited-tag-pagesvisited-desc": "顯示近期訪問頁面的清單。清單可以透過參數來限制。",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "次數",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "排序",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "命名空間"
 }

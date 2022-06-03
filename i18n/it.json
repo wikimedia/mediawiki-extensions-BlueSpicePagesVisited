@@ -2,9 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
+			"GpieroMW",
 			"Matteocng",
-			"Selven",
-			"GpieroMW"
+			"Selven"
 		]
 	},
 	"bs-pagesvisited-desc": "Fornisce un elenco personalizzato delle ultime pagine visitate",

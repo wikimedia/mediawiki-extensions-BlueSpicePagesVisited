@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
+			"GpieroMW",
 			"Matteocng",
 			"Selven"
 		]
@@ -19,5 +20,12 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-count-help": "Imposta il numero di pagine da mostrare nell'elenco",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Ordina",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Namespace",
-	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Mostra solo pagine da questi namespace"
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Mostra solo pagine da questi namespace",
+	"bs-pagesvisited-ve-pagesvisited-title": "Pagine visitate",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "Conteggio",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "Lunghezza massima del titolo",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-help": "Imposta il massimo numero di caratteri ammesso per un titolo",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-help": "Imposta l'ordine di visualizzazione delle pagine",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Ora",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Nome della pagina"
 }

@@ -16,5 +16,6 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "'Namespaces'",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Nur montrez pagini de ca ''namespaces''",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Tempo",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Nomo di la pagino"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Nomo di la pagino",
+	"bs-pagesvisited-pref-sort-pagename": "Titulo"
 }

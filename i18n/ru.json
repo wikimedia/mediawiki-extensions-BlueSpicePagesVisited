@@ -5,11 +5,12 @@
 			"Kareyac",
 			"Meshkov.a",
 			"Okras",
-			"Shuba"
+			"Shuba",
+			"Pacha Tchernof"
 		]
 	},
 	"bs-pagesvisited-desc": "Предоставляет собственный список последних посещенных страниц.",
-	"prefs-pagesvisited": "Посещенные страницы",
+	"prefs-pagesvisited": "Посещённые страницы",
 	"bs-pagesvisited-widget-title": "Посещенные страницы",
 	"bs-pagesvisited-error-nsnotvalid": "Неверное пространство имен{{PLURAL:$1||s}} <code>$2</code> {{PLURAL:$1|is|are}}.",
 	"bs-pagesvisited-pref-widgetlimit": "Ограничение записей:",

@@ -4,7 +4,8 @@
 			"Liuxinyu970226",
 			"NigelSoft",
 			"Xiplus",
-			"StarrySky"
+			"StarrySky",
+			")8"
 		]
 	},
 	"bs-pagesvisited-desc": "提供个性化的最近访问页面列表",
@@ -19,6 +20,7 @@
 	"bs-pagesvisited-tag-pagesvisited-desc": "显示最近访问页面的列表。列表可通过参数限制。",
 	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "计数",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "排序",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "命名空间",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "时间",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "页面名称"
 }

@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Duke of Wikipädia",
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
 			"Felipe L. Ewald",
@@ -26,5 +27,6 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-order-help": "Define a ordem em que as páginas são exibidas",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Espaços nominais",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Só mostra páginas desses espaços nominais",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Tempo"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Tempo",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Nome da página"
 }

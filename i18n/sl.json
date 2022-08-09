@@ -3,6 +3,7 @@
 		"authors": [
 			"Alojz.tic",
 			"Dbc334",
+			"Eleassar",
 			"Skalcaa"
 		]
 	},
@@ -15,5 +16,6 @@
 	"bs-pagesvisited-pref-widgetsortodr": "Razvrsti po:",
 	"bs-pagesvisited-pref-sort-time": "Čas",
 	"bs-pagesvisited-pref-sort-pagename": "Naslov",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Prikaže seznam nedavno obiskanih strani. Seznam lahko omejite s parametri."
+	"bs-pagesvisited-tag-pagesvisited-desc": "Prikaže seznam nedavno obiskanih strani. Seznam lahko omejite s parametri.",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Imenski prostori"
 }

@@ -18,6 +18,7 @@
 	"bs-pagesvisited-tag-pagesvisited-desc": "فهرستی از صفحاتی که اخیراً بازدید کردید را نشان می‌دهد. این فهرست می‌تواند با استفاده از پارامترها محدود شود.",
 	"bs-pagesvisited-ve-pagesvisited-title": "صفحه‌های بازدیدشده",
 	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "شمار",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "بیشینهٔ طول عنوان",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "مرتب‌سازی",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "فضاهای نام",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "زمان",

@@ -21,5 +21,6 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "شمار",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "مرتب‌سازی",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "زمان",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "نام صفحه"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "نام صفحه",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "بیشینهٔ طول عنوان"
 }

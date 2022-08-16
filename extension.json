@@ -47,6 +47,13 @@
 			"WidgetRegistry": {
 				"PAGESVISITED": "\\BlueSpice\\PagesVisited\\UserSidebar\\Widget\\PagesVisited::factory"
 			}
+		},
+		"ContentDroplets": {
+			"Droplets": {
+				"pages-visited": {
+					"class": "\\BlueSpice\\PagesVisited\\ContentDroplets\\VisitedDroplet"
+				}
+			}
 		}
 	},
 	"MessagesDirs": {

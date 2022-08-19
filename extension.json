@@ -83,6 +83,9 @@
 				"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help",
 				"bs-pagesvisited-tag-pagesvisited-attr-order-option-time",
 				"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename"
+			],
+			"dependencies": [
+				"ext.bluespice.visualEditorConnector.tags.classes"
 			]
 		}
 	},

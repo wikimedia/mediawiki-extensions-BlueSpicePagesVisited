@@ -55,21 +55,7 @@ class VisitedDroplet extends TagDroplet {
 	 * @return array
 	 */
 	protected function getAttributes(): array {
-		return [
-			'count' => 7,
-			'maxtitlelength' => 40,
-			'order' => [
-				[
-					[ 'data' ] => 'time',
-					[ 'label' ] => Message::newFromKey( 'bs-pagesvisited-tag-pagesvisited-attr-order-option-time' )
-				],
-				[
-					[ 'data' ] => 'pagename',
-					[ 'label' ] => Message::newFromKey( 'bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename' )
-				]
-			],
-			'namespaces' => ''
-		];
+		return [];
 	}
 
 	/**

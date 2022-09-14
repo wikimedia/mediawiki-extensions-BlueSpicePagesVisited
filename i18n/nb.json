@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"EdoAug"
 		]
 	},
 	"bs-pagesvisited-desc": "Gir en personalisert liste over de sist besøkte sidene",
@@ -13,5 +14,8 @@
 	"bs-pagesvisited-pref-widgetsortodr": "Sorter etter:",
 	"bs-pagesvisited-pref-sort-time": "Tid",
 	"bs-pagesvisited-pref-sort-pagename": "Tittel",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Viser en liste over nylig besøkte sider. Listen kan begrenses med parametre."
+	"bs-pagesvisited-tag-pagesvisited-desc": "Viser en liste over nylig besøkte sider. Listen kan begrenses med parametre.",
+	"bs-pagesvisited-ve-pagesvisited-title": "Sider besøkt",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "Antall",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "Maksimal tittellengde"
 }

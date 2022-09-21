@@ -21,6 +21,8 @@
 	"bs-pagesvisited-pref-sort-time": "Tijd",
 	"bs-pagesvisited-pref-sort-pagename": "Naam",
 	"bs-pagesvisited-tag-pagesvisited-desc": "Toont een lijst met recent bezochte pagina's. Deze lijst kan worden beperkt met parameters.",
+	"bs-pagesvisited-ve-pagesvisited-title": "Bezochte pagina's",
 	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "Aantal",
-	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Naamruimten"
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Naamruimten",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Paginanaam"
 }

@@ -24,5 +24,12 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "Aantal",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Naamruimten",
 	"bs-pagesvisited-ve-pagesvisited-title": "Bezochte pagina's",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Paginanaam"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Paginanaam",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-help": "Het aantal pagina's instellen dat in de lijst wordt weergegeven",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "Maximale titellengte",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-help": "Het maximumaantal tekens instellen voordat een titel wordt afgebroken",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Volgorde",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-help": "De volgorde instellen waarin de pagina's worden weergegeven",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Alleen pagina's uit deze naamruimten tonen",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Tijd"
 }

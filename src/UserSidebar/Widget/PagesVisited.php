@@ -2,17 +2,17 @@
 
 namespace BlueSpice\PagesVisited\UserSidebar\Widget;
 
-use BlueSpice\Data\FieldType;
-use BlueSpice\Data\Filter;
-use BlueSpice\Data\Filter\ListValue;
-use BlueSpice\Data\Filter\Numeric;
-use BlueSpice\Data\Filter\StringValue;
-use BlueSpice\Data\ReaderParams;
 use BlueSpice\PagesVisited\Data\Store;
 use BlueSpice\UserSidebar\Widget;
 use BlueSpice\WhoIsOnline\Data\Record;
 use BsStringHelper;
 use Message;
+use MWStake\MediaWiki\Component\DataStore\FieldType;
+use MWStake\MediaWiki\Component\DataStore\Filter;
+use MWStake\MediaWiki\Component\DataStore\Filter\ListValue;
+use MWStake\MediaWiki\Component\DataStore\Filter\Numeric;
+use MWStake\MediaWiki\Component\DataStore\Filter\StringValue;
+use MWStake\MediaWiki\Component\DataStore\ReaderParams;
 use Title;
 
 class PagesVisited extends Widget {

@@ -2,14 +2,6 @@
 
 namespace BlueSpice\PagesVisited\Tag;
 
-use BlueSpice\Data\FieldType;
-use BlueSpice\Data\Filter;
-use BlueSpice\Data\Filter\ListValue;
-use BlueSpice\Data\Filter\Numeric;
-use BlueSpice\Data\Filter\StringValue;
-use BlueSpice\Data\ReaderParams;
-use BlueSpice\Data\ResultSet;
-use BlueSpice\Data\Sort;
 use BlueSpice\PagesVisited\Data\Store;
 use BlueSpice\PagesVisited\Renderer\PageList;
 use BlueSpice\PagesVisited\Tag\PagesVisited as Tag;
@@ -17,6 +9,14 @@ use BlueSpice\Renderer\Params;
 use BlueSpice\Tag\Handler;
 use BlueSpice\WhoIsOnline\Data\Record;
 use MediaWiki\MediaWikiServices;
+use MWStake\MediaWiki\Component\DataStore\FieldType;
+use MWStake\MediaWiki\Component\DataStore\Filter;
+use MWStake\MediaWiki\Component\DataStore\Filter\ListValue;
+use MWStake\MediaWiki\Component\DataStore\Filter\Numeric;
+use MWStake\MediaWiki\Component\DataStore\Filter\StringValue;
+use MWStake\MediaWiki\Component\DataStore\ReaderParams;
+use MWStake\MediaWiki\Component\DataStore\ResultSet;
+use MWStake\MediaWiki\Component\DataStore\Sort;
 use RequestContext;
 
 class PagesVisitedHandler extends Handler {

@@ -2,8 +2,8 @@
 
 namespace BlueSpice\PagesVisited\Data;
 
-use BlueSpice\Data\NoWriterException;
 use MediaWiki\MediaWikiServices;
+use MWStake\MediaWiki\Component\DataStore\NoWriterException;
 
 class Store extends \BlueSpice\WhoIsOnline\Data\Store {
 

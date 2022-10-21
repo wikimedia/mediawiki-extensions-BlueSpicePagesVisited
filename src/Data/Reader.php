@@ -2,7 +2,7 @@
 
 namespace BlueSpice\PagesVisited\Data;
 
-use BlueSpice\Data\ReaderParams;
+use MWStake\MediaWiki\Component\DataStore\ReaderParams;
 
 class Reader extends \BlueSpice\WhoIsOnline\Data\Reader {
 

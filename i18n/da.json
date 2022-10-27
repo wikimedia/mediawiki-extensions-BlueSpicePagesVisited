@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Joedalton"
+			"Joedalton",
+			"Saederup92"
 		]
 	},
 	"bs-pagesvisited-desc": "Tilbyder en personlig liste over de sidst besøgte sider",
@@ -13,5 +14,7 @@
 	"bs-pagesvisited-pref-widgetsortodr": "Sorter efter:",
 	"bs-pagesvisited-pref-sort-time": "Tidspunkt",
 	"bs-pagesvisited-pref-sort-pagename": "Titel",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Viser en liste over de sidst besøgte sider. Denne liste kan begrænses af parametre."
+	"bs-pagesvisited-tag-pagesvisited-desc": "Viser en liste over de sidst besøgte sider. Denne liste kan begrænses af parametre.",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Navnerum",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Sidenavn"
 }

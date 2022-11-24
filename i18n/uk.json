@@ -16,6 +16,8 @@
 	"bs-pagesvisited-pref-sort-time": "Час",
 	"bs-pagesvisited-pref-sort-pagename": "Заголовок",
 	"bs-pagesvisited-tag-pagesvisited-desc": "Показує список нещодавно відвіданих сторінок. Цей список може бути обмежений параметрами.",
+	"bs-pagesvisited-ve-pagesvisited-title": "Відвідані сторінки",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "Рахувати",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Порядок",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Час"
 }

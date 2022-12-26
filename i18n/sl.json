@@ -17,5 +17,6 @@
 	"bs-pagesvisited-pref-sort-time": "Čas",
 	"bs-pagesvisited-pref-sort-pagename": "Naslov",
 	"bs-pagesvisited-tag-pagesvisited-desc": "Prikaže seznam nedavno obiskanih strani. Seznam lahko omejite s parametri.",
-	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Imenski prostori"
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Imenski prostori",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "Število"
 }

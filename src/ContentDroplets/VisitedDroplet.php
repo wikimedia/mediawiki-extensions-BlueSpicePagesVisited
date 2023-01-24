@@ -4,7 +4,6 @@ namespace BlueSpice\PagesVisited\ContentDroplets;
 
 use MediaWiki\Extension\ContentDroplets\Droplet\TagDroplet;
 use Message;
-use RawMessage;
 
 class VisitedDroplet extends TagDroplet {
 
@@ -12,21 +11,21 @@ class VisitedDroplet extends TagDroplet {
 	 * @inheritDoc
 	 */
 	public function getName(): Message {
-		return new RawMessage( 'Pages Visited' );
+		return Message::newFromKey( 'bs-pagesvisited-droplet-name' );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	public function getDescription(): Message {
-		return new RawMessage( "Pages visited description" );
+		return Message::newFromKey( 'bs-pagesvisited-droplet-description' );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	public function getIcon(): string {
-		return '';
+		return 'droplet-visited';
 	}
 
 	/**

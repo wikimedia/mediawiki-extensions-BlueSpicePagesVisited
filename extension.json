@@ -70,6 +70,7 @@
 			"scripts": [
 				"bs.pagesvisited/util/tag/PagesVisitedDefinition.js"
 			],
+			"styles": "stylesheets/bluespice.pagesvisited.droplets.css",
 			"messages": [
 				"bs-pagesvisited-ve-pagesvisited-title",
 				"bs-pagesvisited-tag-pagesvisited-desc",

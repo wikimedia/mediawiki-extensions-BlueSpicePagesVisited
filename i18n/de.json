@@ -26,5 +26,7 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Namensräume",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Nur Seiten aus diesen Namensräumen anzeigen",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Zeit",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Seitenname"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Seitenname",
+	"bs-pagesvisited-droplet-name": "Besuchte Seiten",
+	"bs-pagesvisited-droplet-description": "Liste mit besuchten Seiten"
 }

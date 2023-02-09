@@ -28,5 +28,7 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Label for the parameter \"namespaces\"\n{{Identical|Namespace}}",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Help message for the parameter \"namespaces\"",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Label for the option \"time\" of the \"order\" attribute input field in the visualeditor tag inspector",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Label for the option \"pagename\" of the \"order\" attribute input field in the visualeditor tag inspector"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Label for the option \"pagename\" of the \"order\" attribute input field in the visualeditor tag inspector",
+	"bs-pagesvisited-droplet-name": "Title of droplet for tag pagesvisited",
+	"bs-pagesvisited-droplet-description": "Description of droplet for tag pagesvisited"
 }

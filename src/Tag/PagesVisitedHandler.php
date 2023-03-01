@@ -27,7 +27,7 @@ class PagesVisitedHandler extends Handler {
 	 */
 	public function handle() {
 		$recordSet = new ResultSet( [], 0 );
-		if ( !$this->parser->getUser()->isAnon() ) {
+		if ( !$this->parser->getUserIdentity()->isRegistered() ) {
 			$readerParams = new ReaderParams( $this->makeParams() );
 			$recordSet = ( new Store() )->getReader()->read( $readerParams );
 		}
@@ -60,7 +60,7 @@ class PagesVisitedHandler extends Handler {
 				Filter::KEY_TYPE => FieldType::STRING
 			], [ Filter::KEY_COMPARISON => Numeric::COMPARISON_EQUALS,
 				Filter::KEY_PROPERTY => Record::USER_ID,
-				Filter::KEY_VALUE => (int)$this->parser->getUser()->getId(),
+				Filter::KEY_VALUE => (int)$this->parser->getUserIdentity()->getId(),
 				Filter::KEY_TYPE => 'numeric'
 			] ]
 		];

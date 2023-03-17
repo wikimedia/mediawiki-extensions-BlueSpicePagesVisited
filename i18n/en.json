@@ -24,5 +24,7 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Namespaces",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Only show pages from these namespaces",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Time",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Pagename"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Pagename",
+	"bs-pagesvisited-droplet-name": "Visited pages",
+	"bs-pagesvisited-droplet-description": "List with visited pages"
 }

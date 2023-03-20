@@ -27,5 +27,7 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-order-help": "Določitev vrstnega reda, v katerem so prikazane strani",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Prikaži samo strani iz teh imenskih prostorov",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Čas",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Ime strani"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Ime strani",
+	"bs-pagesvisited-droplet-name": "Obiskane strani",
+	"bs-pagesvisited-droplet-description": "Seznam z obiskanimi stranmi"
 }

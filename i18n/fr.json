@@ -28,5 +28,7 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Espaces de noms",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Afficher seulement les pages de ces espaces de noms",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Heure",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Nom de la page"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Nom de la page",
+	"bs-pagesvisited-droplet-name": "Pages visitées",
+	"bs-pagesvisited-droplet-description": "Liste de pages visitées"
 }

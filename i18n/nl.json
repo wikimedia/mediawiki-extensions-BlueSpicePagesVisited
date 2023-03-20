@@ -31,5 +31,7 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Volgorde",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-help": "De volgorde instellen waarin de pagina's worden weergegeven",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Alleen pagina's uit deze naamruimten tonen",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Tijd"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Tijd",
+	"bs-pagesvisited-droplet-name": "Bezochte pagina's",
+	"bs-pagesvisited-droplet-description": "Lijst met bezochte pagina's"
 }

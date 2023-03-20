@@ -24,5 +24,7 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Spatios de nomines",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Monstrar solmente le paginas de iste spatios de nomines",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Hora",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Nomine de pagina"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Nomine de pagina",
+	"bs-pagesvisited-droplet-name": "Paginas visitate",
+	"bs-pagesvisited-droplet-description": "Lista con paginas visitate"
 }

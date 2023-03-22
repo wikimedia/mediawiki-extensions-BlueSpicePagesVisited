@@ -25,5 +25,7 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "מרחבי שם",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "להציג רק דפים ממרחבי השם האלה",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "זמן",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "שם דף"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "שם דף",
+	"bs-pagesvisited-droplet-name": "ביקרת בדפים",
+	"bs-pagesvisited-droplet-description": "רשימה עם דפים שביקרת בהם"
 }

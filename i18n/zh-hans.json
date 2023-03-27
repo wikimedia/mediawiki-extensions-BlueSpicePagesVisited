@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			")8",
+			"850710247liu",
 			"Liuxinyu970226",
 			"NigelSoft",
 			"StarrySky",
@@ -19,6 +20,7 @@
 	"bs-pagesvisited-pref-sort-time": "时间",
 	"bs-pagesvisited-pref-sort-pagename": "标题",
 	"bs-pagesvisited-tag-pagesvisited-desc": "显示最近访问页面的列表。列表可通过参数限制。",
+	"bs-pagesvisited-ve-pagesvisited-title": "已访问的页面",
 	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "计数",
 	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "最大标题长度",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "排序",

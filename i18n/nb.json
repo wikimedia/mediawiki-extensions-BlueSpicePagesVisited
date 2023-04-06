@@ -17,5 +17,9 @@
 	"bs-pagesvisited-tag-pagesvisited-desc": "Viser en liste over nylig besøkte sider. Listen kan begrenses med parametre.",
 	"bs-pagesvisited-ve-pagesvisited-title": "Sider besøkt",
 	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "Antall",
-	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "Maksimal tittellengde"
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "Maksimal tittellengde",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Navnerom",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Vis kun sider fra disse navnerommene",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Tid",
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Sidenavn"
 }

@@ -3,6 +3,7 @@
 		"authors": [
 			")8",
 			"850710247liu",
+			"Kishinsagi",
 			"Liuxinyu970226",
 			"NigelSoft",
 			"StarrySky",
@@ -26,5 +27,6 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "排序",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "命名空间",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "时间",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "页面名称"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "页面名称",
+	"bs-pagesvisited-droplet-name": "访问过的页面"
 }

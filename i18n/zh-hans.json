@@ -7,7 +7,8 @@
 			"StarrySky",
 			"Wzl19371",
 			"Xiplus",
-			"850710247liu"
+			"850710247liu",
+			"Kishinsagi"
 		]
 	},
 	"bs-pagesvisited-desc": "提供个性化的最近访问页面列表",
@@ -26,5 +27,6 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "排序",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "命名空间",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "时间",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "页面名称"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "页面名称",
+	"bs-pagesvisited-droplet-name": "访问过的页面"
 }

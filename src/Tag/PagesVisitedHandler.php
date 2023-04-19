@@ -26,11 +26,14 @@ class PagesVisitedHandler extends Handler {
 	 * @return string
 	 */
 	public function handle() {
-		$recordSet = new ResultSet( [], 0 );
+		$context = RequestContext::getMain();
 		if ( !$this->parser->getUserIdentity()->isRegistered() ) {
-			$readerParams = new ReaderParams( $this->makeParams() );
-			$recordSet = ( new Store() )->getReader()->read( $readerParams );
+			return $context->msg( 'bs-pagesvisited-label-anon-user' )->text();
 		}
+
+		$recordSet = new ResultSet( [], 0 );
+		$readerParams = new ReaderParams( $this->makeParams() );
+		$recordSet = ( new Store() )->getReader()->read( $readerParams );
 
 		$portlet = MediaWikiServices::getInstance()->getService( 'BSRendererFactory' )->get(
 			'pagesvisited-pagelist',
@@ -39,7 +42,7 @@ class PagesVisitedHandler extends Handler {
 				PageList::PARAM_MAX_TITLE_LENGTH
 					=> $this->processedArgs[ Tag::PARAM_MAX_TITLE_LENGTH ]
 			] ),
-			RequestContext::getMain()
+			$context
 		);
 
 		return $portlet->render();

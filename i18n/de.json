@@ -28,5 +28,6 @@
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Zeit",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Seitenname",
 	"bs-pagesvisited-droplet-name": "Besuchte Seiten",
-	"bs-pagesvisited-droplet-description": "Liste mit besuchten Seiten"
+	"bs-pagesvisited-droplet-description": "Liste mit besuchten Seiten",
+	"bs-pagesvisited-label-anon-user": "Um besuchte Seiten zu sehen, melde dich bitte bei deinem Benutzerkonto an"
 }

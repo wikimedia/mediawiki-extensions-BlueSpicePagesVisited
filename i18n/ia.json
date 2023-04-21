@@ -26,5 +26,6 @@
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Hora",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Nomine de pagina",
 	"bs-pagesvisited-droplet-name": "Paginas visitate",
-	"bs-pagesvisited-droplet-description": "Lista con paginas visitate"
+	"bs-pagesvisited-droplet-description": "Lista con paginas visitate",
+	"bs-pagesvisited-label-anon-user": "Pro vider le paginas que tu ha visitate, per favor aperi session a tu conto"
 }

@@ -29,5 +29,6 @@
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Čas",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Ime strani",
 	"bs-pagesvisited-droplet-name": "Obiskane strani",
-	"bs-pagesvisited-droplet-description": "Seznam z obiskanimi stranmi"
+	"bs-pagesvisited-droplet-description": "Seznam z obiskanimi stranmi",
+	"bs-pagesvisited-label-anon-user": "Za ogled strani, ki ste jih obiskali, se prijavite v svoj račun"
 }

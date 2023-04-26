@@ -27,5 +27,6 @@
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "זמן",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "שם דף",
 	"bs-pagesvisited-droplet-name": "ביקרת בדפים",
-	"bs-pagesvisited-droplet-description": "רשימה עם דפים שביקרת בהם"
+	"bs-pagesvisited-droplet-description": "רשימה עם דפים שביקרת בהם",
+	"bs-pagesvisited-label-anon-user": "כדי לראות דפים שביקרת בהם, נא להיכנס לחשבונך"
 }

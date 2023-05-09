@@ -5,7 +5,8 @@
 			"Meno25",
 			"NancyMilad",
 			"أَحمد",
-			"ديفيد"
+			"ديفيد",
+			"Alshamiri1"
 		]
 	},
 	"bs-pagesvisited-desc": "يقدم قائمة شخصية بآخر الصفحات التي تمت زيارتها",
@@ -28,5 +29,8 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "النطاقات",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "فقط اظهر الصفحات من هذه النطاقات",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "الوقت",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "اسم الصفحة"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "اسم الصفحة",
+	"bs-pagesvisited-droplet-name": "الصفحات التي تمت زيارتها",
+	"bs-pagesvisited-droplet-description": "قائمة بالصفحات التي تمت زيارتها",
+	"bs-pagesvisited-label-anon-user": "لرؤية الصفحات التي قمت بزيارتها ، يرجى تسجيل الدخول إلى حسابك"
 }

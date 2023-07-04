@@ -3,6 +3,7 @@
 		"authors": [
 			"Arg",
 			"Esketti",
+			"HanV",
 			"Mainframe98",
 			"McDutchie",
 			"Nieuwsgierige Gebruiker",
@@ -33,5 +34,6 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Alleen pagina's uit deze naamruimten tonen",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Tijd",
 	"bs-pagesvisited-droplet-name": "Bezochte pagina's",
-	"bs-pagesvisited-droplet-description": "Lijst met bezochte pagina's"
+	"bs-pagesvisited-droplet-description": "Lijst met bezochte pagina's",
+	"bs-pagesvisited-label-anon-user": "Log in op uw account om pagina's te zien die u heeft bezocht"
 }

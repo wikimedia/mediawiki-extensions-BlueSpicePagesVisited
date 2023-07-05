@@ -25,5 +25,8 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Espaços nominais",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Mostrar somente páginas destes espaços nominais",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Hora",
-	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Nome da página"
+	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Nome da página",
+	"bs-pagesvisited-droplet-name": "Páginas visitadas",
+	"bs-pagesvisited-droplet-description": "Lista de páginas visitadas",
+	"bs-pagesvisited-label-anon-user": "Para ver as páginas que visitou, inicie uma sessão na sua conta"
 }

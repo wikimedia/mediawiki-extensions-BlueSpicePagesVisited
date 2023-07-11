@@ -8,7 +8,8 @@
 			"Nieuwsgierige Gebruiker",
 			"SPQRobin",
 			"Siebrand",
-			"Sjoerddebruin"
+			"Sjoerddebruin",
+			"HanV"
 		]
 	},
 	"bs-pagesvisited-desc": "Biedt een gepersonaliseerde lijst van de laatst bezochte pagina's",
@@ -33,5 +34,6 @@
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Tijd",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Paginanaam",
 	"bs-pagesvisited-droplet-name": "Bezochte pagina's",
-	"bs-pagesvisited-droplet-description": "Lijst met bezochte pagina's"
+	"bs-pagesvisited-droplet-description": "Lijst met bezochte pagina's",
+	"bs-pagesvisited-label-anon-user": "Log in op uw account om pagina's te zien die u heeft bezocht"
 }

@@ -23,5 +23,8 @@
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Tid",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Sidenavn",
 	"bs-pagesvisited-droplet-name": "Besøkte sider",
-	"bs-pagesvisited-droplet-description": "Liste med besøkte sider"
+	"bs-pagesvisited-droplet-description": "Liste med besøkte sider",
+	"bs-pagesvisited-ve-pagesvisited-attr-count-help": "Angi antall sider vist i lista",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-help": "Angi maksimalt antall tegn før en tittel blir avskåret",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Rekkefølge"
 }

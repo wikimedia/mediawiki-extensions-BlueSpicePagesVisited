@@ -26,5 +26,7 @@
 	"bs-pagesvisited-droplet-description": "Liste med besøkte sider",
 	"bs-pagesvisited-ve-pagesvisited-attr-count-help": "Angi antall sider vist i lista",
 	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-help": "Angi maksimalt antall tegn før en tittel blir avskåret",
-	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Rekkefølge"
+	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Rekkefølge",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-help": "Sett rekkefølgen sidene vises i",
+	"bs-pagesvisited-label-anon-user": "Logg inn for å se sider du har besøkt"
 }

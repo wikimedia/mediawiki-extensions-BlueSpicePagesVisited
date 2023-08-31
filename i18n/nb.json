@@ -21,6 +21,7 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "Maksimal tittellengde",
 	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-help": "Angi maksimalt antall tegn før en tittel blir avskåret",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "Rekkefølge",
+	"bs-pagesvisited-ve-pagesvisited-attr-order-help": "Sett rekkefølgen sidene vises i",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Navnerom",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "Vis kun sider fra disse navnerommene",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "Tid",

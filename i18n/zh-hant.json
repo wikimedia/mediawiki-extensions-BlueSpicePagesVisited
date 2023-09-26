@@ -25,5 +25,6 @@
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "頁面名稱",
 	"bs-pagesvisited-ve-pagesvisited-title": "已造訪的頁面",
 	"bs-pagesvisited-droplet-name": "已造訪的頁面",
-	"bs-pagesvisited-droplet-description": "已造訪頁面的清單"
+	"bs-pagesvisited-droplet-description": "已造訪頁面的清單",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "最大標題長度"
 }

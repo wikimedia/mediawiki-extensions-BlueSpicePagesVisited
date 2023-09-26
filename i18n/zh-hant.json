@@ -20,6 +20,7 @@
 	"bs-pagesvisited-tag-pagesvisited-desc": "顯示近期訪問頁面的清單。清單可以透過參數來限制。",
 	"bs-pagesvisited-ve-pagesvisited-title": "已造訪的頁面",
 	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "次數",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "最大標題長度",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "排序",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "命名空間",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "時間",

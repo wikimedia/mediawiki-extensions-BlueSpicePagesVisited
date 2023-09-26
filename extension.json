@@ -62,8 +62,7 @@
 		]
 	},
 	"Hooks": {
-		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\PagesVisited\\Extension::onBSUsageTrackerRegisterCollectors",
-		"BSInsertMagicAjaxGetData": "\\BlueSpice\\PagesVisited\\Hook\\BSInsertMagicAjaxGetData\\AddPagesVisited::callback"
+		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\PagesVisited\\Extension::onBSUsageTrackerRegisterCollectors"
 	},
 	"ResourceModules": {
 		"ext.bluespice.pagesvisited.visualEditorTagDefinition": {

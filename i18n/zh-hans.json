@@ -8,7 +8,8 @@
 			"NigelSoft",
 			"StarrySky",
 			"Wzl19371",
-			"Xiplus"
+			"Xiplus",
+			"Xyb"
 		]
 	},
 	"bs-pagesvisited-desc": "提供个性化的最近访问页面列表",
@@ -28,5 +29,6 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "命名空间",
 	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "最大标题长度",
 	"bs-pagesvisited-ve-pagesvisited-title": "已访问的页面",
-	"bs-pagesvisited-droplet-name": "访问过的页面"
+	"bs-pagesvisited-droplet-name": "访问过的页面",
+	"bs-pagesvisited-droplet-description": "包含已访问页面的列表"
 }

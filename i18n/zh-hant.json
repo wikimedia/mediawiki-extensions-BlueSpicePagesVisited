@@ -4,8 +4,8 @@
 			"Cwlin0416",
 			"Kly",
 			"Liuxinyu970226",
-			"Winston Sung",
-			"Willy1018"
+			"Willy1018",
+			"Winston Sung"
 		]
 	},
 	"bs-pagesvisited-desc": "提供最近訪問頁面的個人化清單",
@@ -25,5 +25,6 @@
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "時間",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "頁面名稱",
 	"bs-pagesvisited-droplet-name": "已造訪的頁面",
-	"bs-pagesvisited-droplet-description": "已造訪頁面的清單"
+	"bs-pagesvisited-droplet-description": "已造訪頁面的清單",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "最大標題長度"
 }

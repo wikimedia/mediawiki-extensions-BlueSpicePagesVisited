@@ -3,18 +3,19 @@
 		"authors": [
 			"Comp1089",
 			"Sagan",
-			"Азат Хәлилов"
+			"Азат Хәлилов",
+			"З. ӘЙЛЕ"
 		]
 	},
-	"bs-pagesvisited-desc": "Үҙе төҙөгән битте ҡараусылар исемлеген күрһәтә\n\nҺуңғы ҡаралған  биттәрҙең үҙ исемлеген тәҡдим итә",
-	"prefs-pagesvisited": "Битт ҡарау",
+	"bs-pagesvisited-desc": "Һуңғы ҡаралған биттәрҙең шәхси исемлеген тәҡдим итә",
+	"prefs-pagesvisited": "Ҡаралған биттәр",
 	"bs-pagesvisited-widget-title": "Ҡаралған биттәр",
-	"bs-pagesvisited-error-nsnotvalid": "Исемдәр арауығы дөрөҫ түгел{{PLURAL:$1||s}} <code>$2</code> {{PLURAL:$1|is|are}}.",
-	"bs-pagesvisited-pref-widgetlimit": "Яҙма эшләү сикләнгән",
+	"bs-pagesvisited-error-nsnotvalid": "<code>$2</code> {{PLURAL:$1|исемдәр арауығы}}  {{PLURAL:$1|дөрөҫ түгел}}.",
+	"bs-pagesvisited-pref-widgetlimit": "Яҙмалар сикләнгән:",
 	"bs-pagesvisited-pref-widgetns": "Исемдәр арауығы:",
-	"bs-pagesvisited-pref-widgetsortodr": "Тәртипләштереү:",
+	"bs-pagesvisited-pref-widgetsortodr": "Айырырға:",
 	"bs-pagesvisited-pref-sort-time": "Ваҡыт",
-	"bs-pagesvisited-pref-sort-pagename": "Баш һүҙ",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Һеҙ ҡараған биттәр исемлеге",
+	"bs-pagesvisited-pref-sort-pagename": "Атама",
+	"bs-pagesvisited-tag-pagesvisited-desc": "Күптән түгел ҡаралған биттәр исемлеген күрһәтә. Ул параметрҙар менән сикләнеүе ихтимал.",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "Бит исеме"
 }

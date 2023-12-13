@@ -5,7 +5,8 @@
 			"Otokoume",
 			"Shirayuki",
 			"Sou0012",
-			"しぃ"
+			"しぃ",
+			"もなー(偽物)"
 		]
 	},
 	"bs-pagesvisited-desc": "最後に訪問したページのパーソナライズされたリストを提供します",
@@ -23,6 +24,7 @@
 	"bs-pagesvisited-ve-pagesvisited-attr-count-help": "リストに表示するページ数を設定する",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "並び順",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "名前空間",
+	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "これらの名前空間のページのみを表示します",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "時刻",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "ページ名"
 }

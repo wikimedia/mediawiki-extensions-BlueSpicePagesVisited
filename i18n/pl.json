@@ -5,12 +5,12 @@
 			"WaldiSt"
 		]
 	},
-	"bs-pagesvisited-error-nsnotvalid": "{{PLURAL:$1|Dana przestrze\u0144|Dane przestrzenie}} nazw <code>$2<\/code> {{PLURAL:$1|nie jest|nie s\u0105}} prawid\u0142owe.",
+	"bs-pagesvisited-error-nsnotvalid": "{{PLURAL:$1|Dana przestrzeń|Dane przestrzenie}} nazw <code>$2</code> {{PLURAL:$1|nie jest|nie są}} prawidłowe.",
 	"bs-pagesvisited-pref-widgetns": "Przestrzenie nazw:",
-	"bs-pagesvisited-pref-widgetsortodr": "Sortuj wed\u0142ug:",
+	"bs-pagesvisited-pref-widgetsortodr": "Sortuj według:",
 	"bs-pagesvisited-pref-sort-time": "Czas",
-	"bs-pagesvisited-pref-sort-pagename": "Tytu\u0142",
-	"bs-pagesvisited-tag-pagesvisited-desc": "Pokazuje list\u0119 ostatnio odwiedzanych stron. Lista mo\u017ce zosta\u0107 ograniczona przez parametry.",
+	"bs-pagesvisited-pref-sort-pagename": "Tytuł",
+	"bs-pagesvisited-tag-pagesvisited-desc": "Pokazuje listę ostatnio odwiedzanych stron. Lista może zostać ograniczona przez parametry.",
 	"bs-pagesvisited-droplet-name": "Odwiedzone strony",
 	"bs-pagesvisited-droplet-description": "Lista z odwiedzonymi stronami",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "Przestrzenie nazw",

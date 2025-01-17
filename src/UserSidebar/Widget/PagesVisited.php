@@ -6,6 +6,7 @@ use BlueSpice\PagesVisited\Data\Store;
 use BlueSpice\UserSidebar\Widget;
 use BlueSpice\WhoIsOnline\Data\Record;
 use BsStringHelper;
+use MediaWiki\Title\Title;
 use Message;
 use MWStake\MediaWiki\Component\DataStore\FieldType;
 use MWStake\MediaWiki\Component\DataStore\Filter;
@@ -13,7 +14,6 @@ use MWStake\MediaWiki\Component\DataStore\Filter\ListValue;
 use MWStake\MediaWiki\Component\DataStore\Filter\Numeric;
 use MWStake\MediaWiki\Component\DataStore\Filter\StringValue;
 use MWStake\MediaWiki\Component\DataStore\ReaderParams;
-use Title;
 
 class PagesVisited extends Widget {
 	public const PARAM_TITLE_MAX_LENGHT = 'maxtitlelength';

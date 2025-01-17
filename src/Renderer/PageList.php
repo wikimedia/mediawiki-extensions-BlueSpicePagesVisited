@@ -11,7 +11,7 @@ use Html;
 use HtmlArmor;
 use IContextSource;
 use MediaWiki\Linker\LinkRenderer;
-use Title;
+use MediaWiki\Title\Title;
 
 class PageList extends \BlueSpice\WhoIsOnline\Renderer\UserList {
 	public const PARAM_MAX_TITLE_LENGTH = 'maxtitlelength';

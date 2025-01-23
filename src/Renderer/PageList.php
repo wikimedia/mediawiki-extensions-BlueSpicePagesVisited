@@ -8,8 +8,8 @@ use BlueSpice\WhoIsOnline\Data\Record;
 use BsStringHelper;
 use Html;
 use HtmlArmor;
-use IContextSource;
 use MediaWiki\Config\Config;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Title\Title;
 

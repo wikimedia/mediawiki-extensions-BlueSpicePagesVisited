@@ -6,10 +6,10 @@ use BlueSpice\Renderer\Params;
 use BlueSpice\UtilityFactory;
 use BlueSpice\WhoIsOnline\Data\Record;
 use BsStringHelper;
-use Config;
 use Html;
 use HtmlArmor;
 use IContextSource;
+use MediaWiki\Config\Config;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Title\Title;
 

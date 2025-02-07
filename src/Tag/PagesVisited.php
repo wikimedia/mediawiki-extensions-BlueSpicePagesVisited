@@ -6,7 +6,7 @@ use BlueSpice\ParamProcessor\ParamDefinition;
 use BlueSpice\ParamProcessor\ParamType;
 use BlueSpice\Tag\GenericHandler;
 use BlueSpice\Tag\MarkerType\NoWiki;
-use Parser;
+use MediaWiki\Parser\Parser;
 use PPFrame;
 
 class PagesVisited extends \BlueSpice\Tag\Tag {

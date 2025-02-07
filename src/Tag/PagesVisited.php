@@ -7,7 +7,7 @@ use BlueSpice\ParamProcessor\ParamType;
 use BlueSpice\Tag\GenericHandler;
 use BlueSpice\Tag\MarkerType\NoWiki;
 use MediaWiki\Parser\Parser;
-use PPFrame;
+use MediaWiki\Parser\PPFrame;
 
 class PagesVisited extends \BlueSpice\Tag\Tag {
 	public const PARAM_COUNT = 'count';

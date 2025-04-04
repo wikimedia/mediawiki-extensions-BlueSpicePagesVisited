@@ -25,9 +25,10 @@ class PageList extends \BlueSpice\WhoIsOnline\Renderer\UserList {
 	 * @param string $name | ''
 	 * @param UtilityFactory|null $util
 	 */
-	protected function __construct( Config $config, Params $params,
-		LinkRenderer $linkRenderer = null, IContextSource $context = null,
-		$name = '', UtilityFactory $util = null ) {
+	protected function __construct(
+		Config $config, Params $params, ?LinkRenderer $linkRenderer = null,
+		?IContextSource $context = null, $name = '', ?UtilityFactory $util = null
+	) {
 		parent::__construct( $config, $params, $linkRenderer, $context, $name, $util );
 		$this->args[static::PARAM_MAX_TITLE_LENGTH] = $params->get(
 			static::PARAM_MAX_TITLE_LENGTH,

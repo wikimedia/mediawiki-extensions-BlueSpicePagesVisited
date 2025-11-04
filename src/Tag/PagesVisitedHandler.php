@@ -3,18 +3,20 @@
 namespace BlueSpice\PagesVisited\Tag;
 
 use BlueSpice\PagesVisited\Data\Store;
-use BlueSpice\PagesVisited\Renderer\PageList;
-use BlueSpice\Renderer\Params;
-use BlueSpice\RendererFactory;
 use BlueSpice\WhoIsOnline\Data\Record;
+use BsStringHelper;
+use HtmlArmor;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Html\Html;
+use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\PPFrame;
+use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\DataStore\FieldType;
 use MWStake\MediaWiki\Component\DataStore\Filter;
 use MWStake\MediaWiki\Component\DataStore\Filter\ListValue;
-use MWStake\MediaWiki\Component\DataStore\Filter\Numeric;
+use MWStake\MediaWiki\Component\DataStore\Filter\NumericValue;
 use MWStake\MediaWiki\Component\DataStore\Filter\StringValue;
 use MWStake\MediaWiki\Component\DataStore\ReaderParams;
 use MWStake\MediaWiki\Component\DataStore\Sort;
@@ -22,8 +24,13 @@ use MWStake\MediaWiki\Component\GenericTagHandler\ITagHandler;
 
 class PagesVisitedHandler implements ITagHandler {
 
+	/**
+	 * @param TitleFactory $titleFactory
+	 * @param LinkRenderer $linkRenderer
+	 */
 	public function __construct(
-		private readonly RendererFactory $rendererFactory,
+		private readonly TitleFactory $titleFactory,
+		private readonly LinkRenderer $linkRenderer
 	) {
 	}
 
@@ -38,18 +45,32 @@ class PagesVisitedHandler implements ITagHandler {
 
 		$readerParams = new ReaderParams( $this->makeParams( $params, $parser->getUserIdentity() ) );
 		$recordSet = ( new Store() )->getReader()->read( $readerParams );
+		$maxTitleLength = $params['maxtitlelength'];
 
-		$portlet = $this->rendererFactory->get(
-			'pagesvisited-pagelist',
-			new Params( [
-				PageList::PARAM_RECORD_SET => $recordSet,
-				PageList::PARAM_MAX_TITLE_LENGTH
-				=> $params['maxtitlelength']
-			] ),
-			$context
-		);
-
-		return $portlet->render();
+		$out = Html::openElement( 'ul' );
+		if ( $recordSet->getTotal() > 0 ) {
+			foreach ( $recordSet->getRecords() as $record ) {
+				$title = $this->titleFactory->makeTitleSafe(
+					$record->get( Record::PAGE_NAMESPACE ),
+					$record->get( Record::PAGE_TITLE )
+				);
+				if ( !$title ) {
+					continue;
+				}
+				$display = null;
+				if ( $maxTitleLength > 0 ) {
+					$display = new HtmlArmor( BsStringHelper::shorten( $title->getPrefixedText(), [
+						'max-length' => $maxTitleLength,
+						'position' => 'middle'
+					] ) );
+				}
+				$out .= Html::openElement( 'li' );
+				$out .= $this->linkRenderer->makeLink( $title, $display );
+				$out .= Html::closeElement( 'li' );
+			}
+		}
+		$out .= Html::closeElement( 'ul' );
+		return $out;
 	}
 
 	/**
@@ -58,14 +79,14 @@ class PagesVisitedHandler implements ITagHandler {
 	 */
 	protected function makeParams( array $params, UserIdentity $userIdentity ) {
 		$params = [
-			ReaderParams::PARAM_LIMIT => $params['count'],
+			ReaderParams::PARAM_LIMIT => $params['count'] ?? ReaderParams::LIMIT_INFINITE,
 			ReaderParams::PARAM_FILTER => [],
 			ReaderParams::PARAM_FILTER => [ [
 				Filter::KEY_COMPARISON => StringValue::COMPARISON_EQUALS,
 				Filter::KEY_PROPERTY => Record::ACTION,
 				Filter::KEY_VALUE => 'view',
 				Filter::KEY_TYPE => FieldType::STRING
-			], [ Filter::KEY_COMPARISON => Numeric::COMPARISON_EQUALS,
+			], [ Filter::KEY_COMPARISON => NumericValue::COMPARISON_EQUALS,
 				Filter::KEY_PROPERTY => Record::USER_ID,
 				Filter::KEY_VALUE => $userIdentity->getId(),
 				Filter::KEY_TYPE => 'numeric'
@@ -78,10 +99,6 @@ class PagesVisitedHandler implements ITagHandler {
 				Filter::KEY_VALUE => $params['namespaces'],
 				Filter::KEY_TYPE => FieldType::LISTVALUE
 			];
-		}
-		$params[ReaderParams::PARAM_LIMIT] = ReaderParams::LIMIT_INFINITE;
-		if ( !empty( $params['count'] ) ) {
-			$params[ReaderParams::PARAM_LIMIT] = $params['count'];
 		}
 		if ( $params['order'] === 'pagename' ) {
 			$params[ReaderParams::PARAM_SORT][] = [

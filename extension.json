@@ -24,9 +24,6 @@
 					"className": "\\BlueSpice\\PagesVisited\\Extension",
 					"extPath": "/BlueSpicePagesVisited"
 				}
-			},
-			"RendererRegistry": {
-				"pagesvisited-pagelist": "\\BlueSpice\\PagesVisited\\Renderer\\PageList::factory"
 			}
 		},
 		"BlueSpiceUserSidebar": {

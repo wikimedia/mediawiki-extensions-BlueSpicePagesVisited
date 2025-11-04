@@ -55,7 +55,8 @@ class PagesVisited extends GenericTag {
 	 * @inheritDoc
 	 */
 	public function getHandler( MediaWikiServices $services ): ITagHandler {
-		return new PagesVisitedHandler( $services->getService( 'BSRendererFactory' ) );
+		return new PagesVisitedHandler( $services->getTitleFactory(),
+		$services->getLinkRenderer() );
 	}
 
 	/**

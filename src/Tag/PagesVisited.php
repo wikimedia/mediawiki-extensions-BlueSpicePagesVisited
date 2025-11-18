@@ -88,21 +88,21 @@ class PagesVisited extends GenericTag {
 			[
 				'type' => 'number',
 				'name' => 'count',
-				'label' => Message::newFromKey( 'bs-pagesvisited-ve-pagesvisited-attr-count-label' )->text(),
+				'label' => Message::newFromKey( 'bs-pagesvisited-ve-pagesvisited-attr-number-label' )->text(),
 				'help' => Message::newFromKey( 'bs-pagesvisited-ve-pagesvisited-attr-count-help' )->text(),
 				'value' => 7,
 			],
 			[
 				'type' => 'number',
 				'name' => 'maxtitlelength',
-				'label' => Message::newFromKey( 'bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label' )->text(),
+				'label' => Message::newFromKey( 'bs-pagesvisited-ve-pagesvisited-attr-maxlength-label' )->text(),
 				'help' => Message::newFromKey( 'bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-help' )->text(),
 				'value' => 20,
 			],
 			[
 				'type' => 'dropdown',
 				'name' => 'order',
-				'label' => Message::newFromKey( 'bs-pagesvisited-ve-pagesvisited-attr-order-label' )->text(),
+				'label' => Message::newFromKey( 'bs-pagesvisited-ve-pagesvisited-attr-orderby-label' )->text(),
 				'help' => Message::newFromKey( 'bs-pagesvisited-ve-pagesvisited-attr-order-help' )->text(),
 				'value' => 'time',
 				'options' => [
@@ -123,7 +123,7 @@ class PagesVisited extends GenericTag {
 			[
 				'type' => 'text',
 				'name' => 'namespaces',
-				'label' => Message::newFromKey( 'bs-pagesvisited-ve-pagesvisited-attr-namespaces-label' )->text(),
+				'label' => Message::newFromKey( 'bs-pagesvisited-ve-pagesvisited-attr-filter-namespaces-label' )->text(),
 				'help' => Message::newFromKey( 'bs-pagesvisited-ve-pagesvisited-attr-namespaces-help' )->text(),
 			]
 		] );

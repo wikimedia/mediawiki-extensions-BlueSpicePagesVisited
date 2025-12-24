@@ -20,17 +20,17 @@
 	"bs-pagesvisited-pref-sort-pagename": "العنوان",
 	"bs-pagesvisited-tag-pagesvisited-desc": "يعرض قائمة بالصفحات التي تمت زيارتها مؤخرا، يمكن تقييد هذه القائمة بواسطة وسائط.",
 	"bs-pagesvisited-ve-pagesvisited-title": "الصفحات التي تم زيارتها",
-	"bs-pagesvisited-ve-pagesvisited-attr-count-label": "العد",
 	"bs-pagesvisited-ve-pagesvisited-attr-count-help": "حدد عدد الصفحات الضاهرة في القائمة",
-	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-label": "الحد الاقصى لطول العنوان",
 	"bs-pagesvisited-ve-pagesvisited-attr-maxtitlelength-help": "حدد الحد الاقصى للحروف قبل ازالة العنوان",
-	"bs-pagesvisited-ve-pagesvisited-attr-order-label": "الترتيب",
 	"bs-pagesvisited-ve-pagesvisited-attr-order-help": "اضبط الترتيب حسب الصفحة التي يتم عرضها",
-	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-label": "النطاقات",
 	"bs-pagesvisited-ve-pagesvisited-attr-namespaces-help": "فقط اظهر الصفحات من هذه النطاقات",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-time": "الوقت",
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "اسم الصفحة",
 	"bs-pagesvisited-droplet-name": "الصفحات التي تمت زيارتها",
 	"bs-pagesvisited-droplet-description": "قائمة بالصفحات التي تمت زيارتها",
-	"bs-pagesvisited-label-anon-user": "لرؤية الصفحات التي قمت بزيارتها ، يرجى تسجيل الدخول إلى حسابك"
+	"bs-pagesvisited-label-anon-user": "لرؤية الصفحات التي قمت بزيارتها ، يرجى تسجيل الدخول إلى حسابك",
+	"bs-pagesvisited-ve-pagesvisited-attr-number-label": "عدد النتائج المعروضة",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxlength-label": "الحد الأقصى لطول عناوين الصفحات",
+	"bs-pagesvisited-ve-pagesvisited-attr-orderby-label": "الترتيب حسب",
+	"bs-pagesvisited-ve-pagesvisited-attr-filter-namespaces-label": "تصفية حسب مساحات الأسماء"
 }

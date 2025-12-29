@@ -3,7 +3,8 @@
 		"authors": [
 			"Rachmat.Wahidi",
 			"Rachmat04",
-			"Sonic Speedy"
+			"Sonic Speedy",
+			"Bennylin"
 		]
 	},
 	"bs-pagesvisited-desc": "Menyediakan daftar pribadi dari halaman yang terakhir dikunjungi",
@@ -11,7 +12,7 @@
 	"bs-pagesvisited-widget-title": "Halaman yang dikunjungi",
 	"bs-pagesvisited-error-nsnotvalid": "Mengingat {{PLURAL:$1|namespace|namespaces}} <code>$2</code> {{PLURAL:$1|is|are}} tidak valid.",
 	"bs-pagesvisited-pref-widgetlimit": "Batas entri:",
-	"bs-pagesvisited-pref-widgetns": "Ruangnama:",
+	"bs-pagesvisited-pref-widgetns": "Ruang nama:",
 	"bs-pagesvisited-pref-widgetsortodr": "Urut berdasarkan:",
 	"bs-pagesvisited-pref-sort-time": "Waktu",
 	"bs-pagesvisited-pref-sort-pagename": "Judul",

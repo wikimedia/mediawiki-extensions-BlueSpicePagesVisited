@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Avengium",
 			"DiegoAmbrocio",
-			"Macofe",
-			"Avengium"
+			"Macofe"
 		]
 	},
 	"bs-pagesvisited-desc": "Proporciona una lista personalizada de las últimas páginas visitadas",

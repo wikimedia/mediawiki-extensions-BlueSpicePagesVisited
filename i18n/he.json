@@ -26,6 +26,8 @@
 	"bs-pagesvisited-droplet-name": "ביקרת בדפים",
 	"bs-pagesvisited-droplet-description": "רשימה עם דפים שביקרת בהם",
 	"bs-pagesvisited-label-anon-user": "כדי לראות דפים שביקרת בהם, נא להיכנס לחשבונך",
+	"bs-pagesvisited-ve-pagesvisited-attr-number-label": "מספר התוצאות המוצגות",
+	"bs-pagesvisited-ve-pagesvisited-attr-maxlength-label": "אורך מקסימלי של כותרות דפים",
 	"bs-pagesvisited-ve-pagesvisited-attr-orderby-label": "מיון לפי",
 	"bs-pagesvisited-ve-pagesvisited-attr-filter-namespaces-label": "סינון לפי מרחב שמות"
 }

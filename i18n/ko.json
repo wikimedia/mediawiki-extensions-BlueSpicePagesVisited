@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Hwangjy9",
+			"Tensama0415",
 			"Ykhwong",
 			"Yunbj"
 		]
@@ -21,5 +22,8 @@
 	"bs-pagesvisited-tag-pagesvisited-attr-order-option-pagename": "문서 이름",
 	"bs-pagesvisited-ve-pagesvisited-attr-maxlength-label": "문서 제목의 최대 길이",
 	"bs-pagesvisited-ve-pagesvisited-attr-orderby-label": "정렬 기준",
-	"bs-pagesvisited-ve-pagesvisited-attr-filter-namespaces-label": "이름공간별 필터"
+	"bs-pagesvisited-ve-pagesvisited-attr-filter-namespaces-label": "이름공간별 필터",
+	"bs-pagesvisited-droplet-name": "방문한 문서",
+	"bs-pagesvisited-droplet-description": "방문한 문서 목록",
+	"bs-pagesvisited-ve-pagesvisited-attr-number-label": "표시되는 결과 개수"
 }

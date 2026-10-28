@@ -5,7 +5,6 @@ namespace BlueSpice\PagesVisited\Tag;
 use BlueSpice\PagesVisited\Data\Store;
 use BlueSpice\WhoIsOnline\Data\Record;
 use BsStringHelper;
-use HtmlArmor;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
@@ -21,6 +20,7 @@ use MWStake\MediaWiki\Component\DataStore\Filter\StringValue;
 use MWStake\MediaWiki\Component\DataStore\ReaderParams;
 use MWStake\MediaWiki\Component\DataStore\Sort;
 use MWStake\MediaWiki\Component\GenericTagHandler\ITagHandler;
+use Wikimedia\HtmlArmor\HtmlArmor;
 
 class PagesVisitedHandler implements ITagHandler {
 
